@@ -79,7 +79,8 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+  margin-left: $spacing-unit / 2;
+  list-style-type: circle;
 }
 
 li {
@@ -87,6 +88,10 @@ li {
   > ol {
     margin-bottom: 0;
   }
+}
+
+small {
+  color: $small-color;
 }
 
 
@@ -104,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: $a-color;
   text-decoration: none;
 
   &:visited {

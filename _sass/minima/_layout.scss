@@ -212,6 +212,11 @@ a.u-email {
 
   > li {
     margin-bottom: $spacing-unit / 2;
+
+    > h3 {
+      margin-bottom: $spacing-unit / 2;
+
+    }
   }
 }
 
