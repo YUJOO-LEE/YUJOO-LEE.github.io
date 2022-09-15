@@ -2,8 +2,7 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  background-color: lightblue;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -13,9 +12,13 @@
 .site-title {
   @include relative-font-size(1.625);
   //font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  line-height: $base-line-height * $base-font-size * 1;
   letter-spacing: -1px;
   margin-bottom: 0;
+  margin-top: $spacing-unit * 0.25;
   float: left;
 
   &,
@@ -112,7 +115,11 @@
 
 .footer-heading {
   @include relative-font-size(1.125);
-  margin-bottom: $spacing-unit / 2;
+  background-color: lightblue;
+  display: inline-block;
+  color: #000;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 .contact-list,
@@ -130,23 +137,34 @@
 
 .footer-col {
   float: left;
-  margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(15% - (#{$spacing-unit} / 2));
+  width:         calc(15% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+  width:         calc(25% - (#{$spacing-unit} / 2));
+  margin-top: $spacing-unit / 3;
+}
+
+a.u-email {
+  color: #111;
 }
 
 .footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+  width:         calc(20% - (#{$spacing-unit} / 2));
+  margin-top: $spacing-unit / 3;
+}
+
+.footer-col-4 {
+  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+  width:         calc(35% - (#{$spacing-unit} / 2));
+  margin-top: $spacing-unit / 3;
 }
 
 @include media-query($on-laptop) {
@@ -193,7 +211,7 @@
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 2;
   }
 }
 
@@ -253,3 +271,9 @@
     }
   }
 }
+
+.rss-subscribe {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
