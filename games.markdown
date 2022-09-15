@@ -22,49 +22,49 @@ permalink: /games/
 
 <br>
 
-- [두더지 잡기](../study/whack_a_mole/) <small>- *2022.09.12*</small>
+- [두더지 잡기](../js_games/whack_a_mole/) <small>- *2022.09.12*</small>
 
 <br>
 
-- [2048](../study/2048/) <small>- *2022.09.11*</small>
+- [2048](../js_games/2048/) <small>- *2022.09.11*</small>
 
 <br>
 
-- [지뢰찾기](../study/minesweeper/) <small>- *2022.09.08*</small>
+- [지뢰찾기](../js_games/minesweeper/) <small>- *2022.09.08*</small>
 
 <br>
 
-- [카드 짝 맞추기](../study/pairing_cards/) <small>- *2022.09.07*</small>
+- [카드 짝 맞추기](../js_games/pairing_cards/) <small>- *2022.09.07*</small>
 
 <br>
 
-- [텍스트 RPG](../study/text_rpg/) <small>- *2022.09.06*</small>
+- [텍스트 RPG](../js_games/text_rpg/) <small>- *2022.09.06*</small>
 
 <br>
 
-- [틱택토 (삼목)](../study/tictactoe/) <small>- *2022.09.05*</small>
+- [틱택토 (삼목)](../js_games/tictactoe/) <small>- *2022.09.05*</small>
 
 <br>
 
-- [반응 속도 테스트](../study/reaction_time/) <small>- *2022.09.04*</small>
+- [반응 속도 테스트](../js_games/reaction_time/) <small>- *2022.09.04*</small>
 
 <br>
 
-- [가위바위보](../study/rock_paper_scissors/) <small>- *2022.09.03*</small>
+- [가위바위보](../js_games/rock_paper_scissors/) <small>- *2022.09.03*</small>
 
 <br>
 
-- [로또추첨기](../study/lotto/) <small>- *2022.09.02*</small>
+- [로또추첨기](../js_games/lotto/) <small>- *2022.09.02*</small>
 
 <br>
 
-- [숫자야구](../study/number_baseball/) <small>- *2022.09.01*</small>
+- [숫자야구](../js_games/number_baseball/) <small>- *2022.09.01*</small>
 
 <br>
 
-- [계산기](../study/calculator/) <small>- *2022.08.30*</small>
+- [계산기](../js_games/calculator/) <small>- *2022.08.30*</small>
 
 <br>
 
-- [끝말잇기](../study/word_relay/) <small>- *2022.08.29*</small>
+- [끝말잇기](../js_games/word_relay/) <small>- *2022.08.29*</small>
 
