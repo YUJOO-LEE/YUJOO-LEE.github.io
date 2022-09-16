@@ -110,10 +110,10 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
   color: $a-color;
-  text-decoration: none;
+  //text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    color: darken($a-color, 15%);
   }
 
   &:hover {
