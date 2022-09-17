@@ -48,7 +48,7 @@ arr | return
 
 <br>
 
-평균 구하는 건 [반응 속도 측정기](../js_games/reaction_time/) 만들면서 써본 적 있어서 금방 했다.
+평균 구하는 건 [반응 속도 측정기](/js_games/reaction_time/) 만들면서 써본 적 있어서 금방 했다.
 
 <br><br>
 
