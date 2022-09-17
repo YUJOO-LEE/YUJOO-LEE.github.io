@@ -99,7 +99,7 @@ function solution(num) {
 
 <br>
 
-Math.abs를 쓴건 음수때문에.
+`Math.abs()`를 쓴건 음수때문에.
 
 <br>
 
@@ -189,7 +189,7 @@ function solution(n)
 
 처음에는 위와 같이 작성했다.
 
-당장 생각나는 게 for문밖에 없어서..
+당장 생각나는 게 `for`문밖에 없어서..
 
 그리고 다시 아래와 같이 줄여보았다.
 
@@ -206,9 +206,9 @@ function solution(n)
 
 숫자를 문자로, 문자를 배열로 만들고 배열의 각 값을 더해줬다.
 
-나중에 다른 답을 보니 spread 구문 [...(n + '')] 으로 배열로 만들고
+나중에 다른 답을 보니 spread 구문 `[...(n + '')]` 으로 배열로 만들고
 
-Number나 ParseInt 대신 item에 * 1 해서 형변환을 하기도 하더라.
+`Number()`나 `ParseInt()` 대신 item에 * 1 해서 형변환을 하기도 하더라.
 
 새로운 방법을 배웠다.
 
