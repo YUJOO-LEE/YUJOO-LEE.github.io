@@ -8,4 +8,13 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
+
+<script>
+	window.onload = function(){ // 페이지 로딩되면 실행
+		const anchors = document.querySelectorAll('.post a'); // post 내 모든 링크
+		for (let i = 0; i < anchors.length; i++){
+			anchors[i].setAttribute('target', '_blank');  // target _black 추가 (새창으로 열기)
+		}
+	}
+</script>
 </head>
