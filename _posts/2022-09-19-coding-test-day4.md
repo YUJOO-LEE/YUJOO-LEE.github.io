@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  프로그래머스 연습문제 Day3
+title:  프로그래머스 연습문제 Day4
 date:   2022-09-19 21:22:53 +0900
 comments : true
 categories: Note
