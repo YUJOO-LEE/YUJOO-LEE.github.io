@@ -58,25 +58,6 @@ css transform, animation이 주된 내용이었다.
 <hr>
 <br><br>
 
-#### 레이아웃 연습 [링크](/d-code-lab/220920/layout-practice1/)
-
-<br>
-
-<iframe src='/d-code-lab/220920/layout-practice1/' frameborder='0' width='100%' height='500px'></iframe>
-
-<br><br>
-<hr>
-<br><br>
-
-#### transform 3D 효과 비교 [링크](/d-code-lab/220920/transform3d/)
-
-<br>
-
-<iframe src='/d-code-lab/220920/transform3d/' frameborder='0' width='100%' height='500px'></iframe>
-
-<br><br>
-<hr>
-<br><br>
 
 #### transform 3D 효과 비교 [링크](/d-code-lab/220920/transform3d/)
 
