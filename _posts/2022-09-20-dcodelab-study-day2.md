@@ -8,7 +8,7 @@ tags:
 ---
 
 
-9월 20일 첫번째 수업내용
+9월 20일 2일째 수업내용
 
 css transform, animation이 주된 내용이었다.
 
