@@ -22,7 +22,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### float 연습 **1**
+#### float 연습 **1** [링크](/d-code-lab/220919/float1/)
 
 <br>
 
@@ -32,7 +32,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### float 연습 **2**
+#### float 연습 **2** [링크](/d-code-lab/220919/float2/)
 
 <br>
 
@@ -42,7 +42,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### float 연습 **3**
+#### float 연습 **3** [링크](/d-code-lab/220919/float3/)
 
 <br>
 
@@ -52,7 +52,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### float 활용 레이아웃 연습 **1**
+#### float 활용 레이아웃 연습 **1** [링크](/d-code-lab/220919/layout-practice1/)
 
 <br>
 
@@ -62,7 +62,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### float 활용 레이아웃 연습 **2**
+#### float 활용 레이아웃 연습 **2** [링크](/d-code-lab/220919/layout-practice2/)
 
 <br>
 
@@ -72,7 +72,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### float 활용 레이아웃 연습 **3**
+#### float 활용 레이아웃 연습 **3** [링크](/d-code-lab/220919/layout-practice3/)
 
 <br>
 
@@ -82,7 +82,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### margin 역상속 해결
+#### margin 역상속 해결 [링크](/d-code-lab/220919/margin-bug/)
 
 <br>
 
@@ -92,7 +92,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### viewport 관련 단위 학습 (vw, vh, vmax, vmin)
+#### viewport 관련 단위 학습 (vw, vh, vmax, vmin) [링크](/d-code-lab/220919/viewport/)
 
 <br>
 
@@ -102,7 +102,7 @@ float은 이미 알던 내용이라 특별히 어려운 점은 없었고
 <hr>
 <br><br>
 
-#### 프로필카드 예제 제작
+#### 프로필카드 예제 제작 [링크](/d-code-lab/220919/profile-card/member1.html)
 
 <br>
 
