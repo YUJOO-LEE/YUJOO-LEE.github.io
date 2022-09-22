@@ -4,7 +4,7 @@ title:  1회] 코어 자바스크립트 - 정재남
 date:   2022-09-16 21:12:53 +0900
 comments : true
 categories: Book
-tags: 
+tags: [javascript, review]
 ---
 
 인프런에서 [렛츠기릿 자바스크립트 강의](https://www.inflearn.com/course/%EB%A0%88%EC%B8%A0%EA%B8%B0%EB%A6%BF-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)를 다 보고 [코어 자바스크립트 책](https://search.shopping.naver.com/book/catalog/32466950627)을 읽었다.

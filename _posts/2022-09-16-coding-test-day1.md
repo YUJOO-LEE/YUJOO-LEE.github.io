@@ -4,7 +4,7 @@ title:  프로그래머스 연습문제 Day1
 date:   2022-09-16 23:19:53 +0900
 comments : true
 categories: Note
-tags: 
+tags: [programmers, algorithm, javascript]
 ---
 
 책만 읽기 심심해서 프로그래머스 사이트에 있는 연습문제들을 풀면서 공부하기로 했다.

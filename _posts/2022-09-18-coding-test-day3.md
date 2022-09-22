@@ -4,7 +4,7 @@ title:  프로그래머스 연습문제 Day3
 date:   2022-09-18 08:08:53 +0900
 comments : true
 categories: Note
-tags: 
+tags: [programmers, algorithm, javascript]
 ---
 
 
