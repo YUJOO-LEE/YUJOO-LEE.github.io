@@ -27,12 +27,10 @@
 <script src="https://kit.fontawesome.com/08c501c945.js" crossorigin="anonymous"></script>
 <script>
 	window.onload = function(){
-		const anchors = document.querySelectorAll('a');
+		const anchors = document.querySelectorAll('article.post a');
 		for (let i = 0; i < anchors.length; i++){
-      if (anchors[i].textContent === '링크') {
-        anchors[i].innerHTML += `<small><i class="fa-solid fa-arrow-up-right-from-square"></i></small>`;
-			  anchors[i].setAttribute('target', '_blank');
-      }
+      anchors[i].innerHTML += `<small><i class="fa-solid fa-arrow-up-right-from-square"></i></small>`;
+      anchors[i].setAttribute('target', '_blank');
 		}
 	}
 </script>
