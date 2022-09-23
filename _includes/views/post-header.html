@@ -29,8 +29,10 @@
 	window.onload = function(){
 		const anchors = document.querySelectorAll('article.post a');
 		for (let i = 0; i < anchors.length; i++){
-      anchors[i].innerHTML += `<small><i class="fa-solid fa-arrow-up-right-from-square"></i></small>`;
-      anchors[i].setAttribute('target', '_blank');
+      if (!anchors[i].textContent.startsWith('#')) {
+        anchors[i].innerHTML += `<small><i class="fa-solid fa-arrow-up-right-from-square"></i></small>`;
+			  anchors[i].setAttribute('target', '_blank');
+      }
 		}
 	}
 </script>
