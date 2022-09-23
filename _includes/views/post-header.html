@@ -29,7 +29,7 @@
 	window.onload = function(){
 		const anchors = document.querySelectorAll('article.post a');
 		for (let i = 0; i < anchors.length; i++){
-      if (!anchors[i].textContent.startsWith('#')) {
+      if (!anchors[i].getAttribute('href').startsWith('#')) {
         anchors[i].innerHTML += `<small><i class="fa-solid fa-arrow-up-right-from-square"></i></small>`;
 			  anchors[i].setAttribute('target', '_blank');
       }
