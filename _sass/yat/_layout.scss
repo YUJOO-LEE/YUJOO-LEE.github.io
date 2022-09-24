@@ -316,20 +316,22 @@ html {
     color: #777;
   }
 
-  .post-tags .post-tag {
+  .post-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    
+    .post-tag {
     text-decoration: none;
     border: 1px solid;
     padding: 2px 4px;
     border-radius: 2px;
     transition: color 0.2s;
 
-    &:not(:first-child) {
-      margin-left: 8px;
-    }
-
-    &:hover {
-      color: #787878;
-    }
+      &:hover {
+        color: #787878;
+      }
+    } 
   }
 
   .paginator {
