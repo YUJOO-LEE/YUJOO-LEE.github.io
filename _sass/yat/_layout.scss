@@ -17,20 +17,8 @@ html {
 
       &.site-header {
         .site-brand-inner, .page-link {
-          color: #000;
+          // color: $header-text-color;
           transition: 0.1s color;
-        }
-
-        @include media-query($on-laptop) {
-          .page-link {
-            color: $header-text-color;
-          }
-
-          .menu-icon {
-            > svg {
-              fill: $white-color;
-            }
-          }
         }
       }
     }
@@ -99,11 +87,8 @@ html {
     @include relative-font-size(1.125);
     font-weight: bold; //$base-font-weight;
     letter-spacing: -1px;
-    transition: 0.1s filter color;
-
-    &, &:visited {
-      color: $header-text-color;
-    }
+    transition: 0.1s filter, 0.1s color;
+    color: $header-text-color;
 
     .site-favicon {
       display: inline-block;
