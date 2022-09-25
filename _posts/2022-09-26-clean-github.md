@@ -22,7 +22,7 @@ tags: [github, gitignore]
 
 하지만 [gitignore.io](https://gitignore.io)라는 사이트에서 이 파일을 자동으로 생성해 준다고 한다.
 
-![gitignore 스크린샷](./img/posts/22-09-26/gitignore.png)
+![gitignore 스크린샷](/img/posts/22-09-26/gitignore.png)
 
 인풋창에 OS, IDE 등을 입력하면 코드? 로 보이는 문자들이 쭉 나오고 .gitignore 파일에 갖다 붙여 넣으면 된다.
 
