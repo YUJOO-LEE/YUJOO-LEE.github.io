@@ -1,18 +1,18 @@
 $jqcloud-font: 10px "Helvetica", "Arial", sans-serif;
 
-$jqcloud-link-hover-color: #00ccff;
+$jqcloud-link-hover-color: #454545;
 
 $jqcloud-words: (
-        w1: (100%, #aab5f0),
-        w2: (150%, #99ccee),
-        w3: (200%, #a0ddff),
-        w4: (250%, #90c5f0),
-        w5: (300%, #90a0dd),
-        w6: (350%, #90c5f0),
-        w7: (400%, #3399dd),
-        w8: (450%, #00ccff),
-        w9: (500%, #00ccff),
-        w10: (550%, #00ccff)
+  w1: (100%, #ffede5),
+  w2: (150%, #ffdccc),
+  w3: (200%, #ffcab2),
+  w4: (250%, #ffb999),
+  w5: (300%, #ffa87f),
+  w6: (350%, #ff9666),
+  w7: (400%, #ff854c),
+  w8: (450%, #ff7332),
+  w9: (500%, #ff6219),
+  w10: (550%, #ff5100)
 ) !default;
 
 .jqcloud {
@@ -40,6 +40,7 @@ $jqcloud-words: (
 
     &:hover {
       color: $jqcloud-link-hover-color;
+      text-decoration: underline;
     }
   }
 }
@@ -49,4 +50,15 @@ hr{
   width: 100%;
   height: 0;
   margin: 50px 0;
+}
+
+.page-segments-list{
+  display: none;
+}
+.page-segments-list a.btn{
+  display: block;
+  margin-top: 30px;
+}
+.selected{
+  display: block;
 }

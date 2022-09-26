@@ -1,49 +1,90 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<link rel="stylesheet" href="/css/jqcloud.min.css">
 
 {% assign tags = site.tags %}
 <script>
   $(document).ready(function() {
-  let tags = [];
-  {% for tag in tags %}
-    tags.push(['{{ tag[0] | replace:'-', ' ' }}', {{ tag | last | size }}]);
-  {% endfor %}
+    let tags = [];
+    {% for tag in tags %}
+      tags.push(['{{ tag[0] | replace:'-', ' ' }}', {{ tag | last | size }}]);
+    {% endfor %}
 
-  let tagCloudWords = tags.map(w => {
-    return {
-      text: w[0], weight: w[1], link: '#' + w[0]
-    };
-  }).sort((a, b) => {
-    return a.weight < b.weight ? 1 : -1;
-  });
-  $('#jqcloud').jQCloud(tagCloudWords,
-    {
-      height: 400,
-      autoResize: true,
-      fontSize: { from: 0.09, to: 0.02 }
+    let tagCloudWords = tags.map(w => {
+      return {
+        text: w[0], weight: w[1], link: updateQueryString(w[0])
+      };
+    }).sort((a, b) => {
+      return a.weight < b.weight ? 1 : -1;
+    });
+    $('#jqcloud').jQCloud(tagCloudWords,
+      {
+        height: 400,
+        autoResize: true,
+        fontSize: { from: 0.09, to: 0.02 }
+      }
+    );
+
+    let currentTag;
+    const tagLinks = document.querySelector('#jqcloud');
+    tagLinks.addEventListener('click', (e)=>{
+      e.preventDefault();
+      if (e.target.href){
+        currentTag = e.target.textContent;
+        filterByTagName(currentTag);
+      }
+    })
+
+    function updateQueryString(tagName) {
+      const path = `${location.protocol}//${location.host}${location.pathname}?tag=${tagName}`;
+      return path;
     }
-  );
-});
+
+    if (!currentTag) {
+      const queryTag = getQuery().tag;
+      if (queryTag) {
+        currentTag = queryTag;
+        filterByTagName(currentTag);
+      }
+    }
+
+    function getQuery(){
+      let params = {};
+      window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, 
+        function(str, key, value) { 
+            params[key] = value; 
+          }
+        );
+      return params; 
+    }
+    function filterByTagName(tagName) {
+      $('.selected').removeClass('selected');
+      $('.page-segments-list').each((index, elem) => {
+        if (elem.hasAttribute(`data-${tagName}`)) {
+          $(elem).addClass('selected');
+        }
+      });
+    }
+  });
 </script>
 
 <div id="jqcloud"></div>
 
-<hr/>
-
 <div class="page-segments">
-  <ul class="page-segments-list">
-    {% for key in keys %}
-    <h2 id="{{ key }}" class="segment-name">{{ key }}</h2>
-      {% assign items = site.posts | where: field, key %}
-      {% for item in items %}
-        {% if item != nil %}
-        <li> {% include views/post-item.html %} </li>
-        {% endif %}
-      {% endfor %}
-      <a href="#top" class="btn btn-default">
-        <i class="fa fa-refresh" aria-hidden="true"></i> Go back to the top
-      </a> 
-    {% endfor %}
-  </ul>
+  {% for key in keys %}
+  <div class="page-segments-list" data-{{ key }}>
+    <hr/>
+    <ul>
+      <h2 id="{{ key }}" class="segment-name">{{ key }}</h2>
+        {% assign items = site.posts | where: field, key %}
+        {% for item in items %}
+          {% if item != nil %}
+          <li> {% include views/post-item.html %} </li>
+          {% endif %}
+        {% endfor %}
+        <a href="#top" class="btn btn-default">
+          <i class="fa fa-refresh" aria-hidden="true"></i> Go back to the top
+        </a> 
+    </ul>
+  </div>
+  {% endfor %}
 </div>
 <script src="/assets/js/jqcloud.min.js" charset="utf-8"></script>
