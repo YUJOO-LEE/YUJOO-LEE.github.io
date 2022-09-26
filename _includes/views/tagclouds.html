@@ -66,25 +66,27 @@
   });
 </script>
 
-<div id="jqcloud"></div>
-
-<div class="page-segments">
-  {% for key in keys %}
-  <div class="page-segments-list" data-{{ key }}>
-    <hr/>
-    <ul>
-      <h2 id="{{ key }}" class="segment-name">{{ key }}</h2>
-        {% assign items = site.posts | where: field, key %}
-        {% for item in items %}
-          {% if item != nil %}
-          <li> {% include views/post-item.html %} </li>
-          {% endif %}
-        {% endfor %}
-        <a href="#top" class="btn btn-default">
-          <i class="fa fa-refresh" aria-hidden="true"></i> Go back to the top
-        </a> 
-    </ul>
+<div class="tags">
+  <div id="jqcloud"></div>
+  
+  <div class="page-segments">
+    {% for key in keys %}
+    <div class="page-segments-list" data-{{ key }}>
+      <hr/>
+      <ul>
+        <h2 id="{{ key }}" class="segment-name">{{ key }}</h2>
+          {% assign items = site.posts | where: field, key %}
+          {% for item in items %}
+            {% if item != nil %}
+            <li> {% include views/post-item.html %} </li>
+            {% endif %}
+          {% endfor %}
+          <a href="#top" class="btn btn-default">
+            <i class="fa fa-refresh" aria-hidden="true"></i> Go back to the top
+          </a> 
+      </ul>
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 <script src="/assets/js/jqcloud.min.js" charset="utf-8"></script>
