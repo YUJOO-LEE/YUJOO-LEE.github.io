@@ -1,0 +1,49 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<link rel="stylesheet" href="/css/jqcloud.min.css">
+
+{% assign tags = site.tags %}
+<script>
+  $(document).ready(function() {
+  let tags = [];
+  {% for tag in tags %}
+    tags.push(['{{ tag[0] | replace:'-', ' ' }}', {{ tag | last | size }}]);
+  {% endfor %}
+
+  let tagCloudWords = tags.map(w => {
+    return {
+      text: w[0], weight: w[1], link: '#' + w[0]
+    };
+  }).sort((a, b) => {
+    return a.weight < b.weight ? 1 : -1;
+  });
+  $('#jqcloud').jQCloud(tagCloudWords,
+    {
+      height: 400,
+      autoResize: true,
+      fontSize: { from: 0.09, to: 0.02 }
+    }
+  );
+});
+</script>
+
+<div id="jqcloud"></div>
+
+<hr/>
+
+<div class="page-segments">
+  <ul class="page-segments-list">
+    {% for key in keys %}
+    <h2 id="{{ key }}" class="segment-name">{{ key }}</h2>
+      {% assign items = site.posts | where: field, key %}
+      {% for item in items %}
+        {% if item != nil %}
+        <li> {% include views/post-item.html %} </li>
+        {% endif %}
+      {% endfor %}
+      <a href="#top" class="btn btn-default">
+        <i class="fa fa-refresh" aria-hidden="true"></i> Go back to the top
+      </a> 
+    {% endfor %}
+  </ul>
+</div>
+<script src="/assets/js/jqcloud.min.js" charset="utf-8"></script>
