@@ -65,41 +65,41 @@ radio input 체크유무로 효과들을 바꿨는데, position을 적극적으�
 <hr>
 <br><br>
 
-#### [flex 기본](/d-code-lab/220923/flex_basic/)
+#### [flex 기본](/decodelab/220923/flex_basic/)
 
 <br>
 
-<iframe src='/d-code-lab/220923/flex_basic/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220923/flex_basic/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 <hr>
 <br><br>
 
-#### [flex 활용 레이아웃](/d-code-lab/220923/flex_layout/)
+#### [flex 활용 레이아웃](/decodelab/220923/flex_layout/)
 
 <br>
 
-<iframe src='/d-code-lab/220923/flex_layout/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220923/flex_layout/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 <hr>
 <br><br>
 
-#### [header 실습](/d-code-lab/220923/header_practice1/)
+#### [header 실습](/decodelab/220923/header_practice1/)
 
 <br>
 
-<iframe src='/d-code-lab/220923/header_practice1/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220923/header_practice1/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 <hr>
 <br><br>
 
-#### [css만을 활용한 FAQ](/d-code-lab/220923/faq/)
+#### [css만을 활용한 FAQ](/decodelab/220923/faq/)
 
 <br>
 
-<iframe src='/d-code-lab/220923/faq/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220923/faq/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 

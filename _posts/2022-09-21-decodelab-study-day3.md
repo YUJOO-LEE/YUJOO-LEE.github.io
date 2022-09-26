@@ -30,21 +30,21 @@ js를 활용할 날이 다가오고 있다.
 <hr>
 <br><br>
 
-#### hover 예제 [링크](/d-code-lab/220921/hover/)
+#### hover 예제 [링크](/decodelab/220921/hover/)
 
 <br>
 
-<iframe src='/d-code-lab/220921/hover/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220921/hover/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 <hr>
 <br><br>
 
-#### 기업형 레이아웃 예제 [링크](/d-code-lab/220921/layout_practice1/)
+#### 기업형 레이아웃 예제 [링크](/decodelab/220921/layout_practice1/)
 
 <br>
 
-<iframe src='/d-code-lab/220921/layout_practice1/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220921/layout_practice1/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 <hr>

@@ -28,40 +28,40 @@ css만 써오다가 지킬 블로그 설치하면서 처음 봤는데, 제대로
 <hr>
 <br><br>
 
-#### sass 예제 1 [링크](/d-code-lab/220922/sass1/)
+#### sass 예제 1 [링크](/decodelab/220922/sass1/)
 
 <br>
 
-<iframe src='/d-code-lab/220922/sass1/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220922/sass1/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 <hr>
 <br><br>
 
-#### sass 예제 2 [링크](/d-code-lab/220922/sass2_font_btn/)
+#### sass 예제 2 [링크](/decodelab/220922/sass2_font_btn/)
 
 <br>
 
-<iframe src='/d-code-lab/220922/sass2_font_btn/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220922/sass2_font_btn/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 <hr>
 <br><br>
 
-#### 3단 네비게이션 [링크](/d-code-lab/220922/nav_practice1/)
+#### 3단 네비게이션 [링크](/decodelab/220922/nav_practice1/)
 
 <br>
 
-<iframe src='/d-code-lab/220922/nav_practice1/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220922/nav_practice1/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
 <hr>
 <br><br>
 
-#### 기업형 레이아웃 css를 scss로 변경 [링크](/d-code-lab/220922/layout_practice/)
+#### 기업형 레이아웃 css를 scss로 변경 [링크](/decodelab/220922/layout_practice/)
 
 <br>
 
-<iframe src='/d-code-lab/220922/layout_practice/' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/220922/layout_practice/' frameborder='0' width='100%' height='500px'></iframe>
 
 <br><br>
