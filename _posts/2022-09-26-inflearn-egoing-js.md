@@ -3,7 +3,7 @@ layout: post
 title:  인프런 생활코딩 - JS 완강
 date:   2022-09-26 18:58:23 +0900
 comments : true
-categories: Note
+categories: Review
 tags: [inflearn, javascript]
 ---
 
