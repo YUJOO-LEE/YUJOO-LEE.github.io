@@ -24,14 +24,6 @@
     );
 
     let currentTag;
-    const tagLinks = document.querySelector('#jqcloud');
-    tagLinks.addEventListener('click', (e)=>{
-      e.preventDefault();
-      if (e.target.href){
-        currentTag = e.target.textContent;
-        filterByTagName(currentTag);
-      }
-    })
 
     function updateQueryString(tagName) {
       const path = `${location.protocol}//${location.host}${location.pathname}?tag=${tagName}`;
@@ -89,4 +81,5 @@
     {% endfor %}
   </div>
 </div>
+
 <script src="/assets/js/jqcloud.min.js" charset="utf-8"></script>
