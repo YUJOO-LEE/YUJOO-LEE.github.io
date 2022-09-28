@@ -48,16 +48,6 @@ onload, open, alret, screen, location등이 있다.
 <hr>
 <br><br>
 
-### [interaction 갤러리](/decodelab/220928/gallery_interaction/)
-
-<br>
-
-<iframe src='/decodelab/220928/gallery_interaction/' frameborder='0' width='100%' height='500px'></iframe>
-
-<br><br>
-<hr>
-<br><br>
-
 ### [갤러리 아이디어](/decodelab/220928/gallery_interaction/)
 
 <br>
