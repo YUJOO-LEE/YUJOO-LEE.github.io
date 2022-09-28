@@ -161,4 +161,19 @@ for문으로 할까 forEach로 할까 하다가 reduce를 누계 구할때 말�
 
 reduce에 한 뼘 다가갔을까
 
+<br>
+
+```javascript
+function solution(d, budget) {
+  return d.sort((a,b) => a-b).reduce((prev, crr) => {
+    budget = budget - crr;
+    return prev += (budget >= 0);
+  }, 0); 
+}
+```
+
+<br>
+
+한 줄 줄이기. 하하
+
 <br><br>
