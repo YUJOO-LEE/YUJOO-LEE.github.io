@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  코어 자바스크립트 인프런 강의
+title:  코어 자바스크립트 인프런 1. Data type
 date:   2022-09-27 21:38:53 +0900
 comments : true
 categories: Review
