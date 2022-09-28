@@ -20,13 +20,9 @@ js플러그인 ([swiper.js](https://swiperjs.com/), [isotope.js](https://www.npm
 
 ### BOM
 
-window객에 하위에 BOM, DOM이 있으며,
+BOM은 Browser Object Model으로 브라우저에서 제공하는 객체이다.
 
-DOM이 그동안 사용하던 document.?로 웹문서를 이해할 수 있도록 객체화 한 것이다.
-
-그리고 BOM은 Browser Object Model으로 브라우저 관련 객체이다.
-
-BOM객체로는 onload, open, alret, screen, location등이 있다.
+onload, open, alret, screen, location등이 있다.
 
 <br><br>
 <hr>
