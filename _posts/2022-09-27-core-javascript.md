@@ -8,7 +8,7 @@ tags: [inflearn, javascript]
 ---
 
 
-인프런 강의 보면서 정리해두기
+[인프런 강의](https://www.inflearn.com/course/%ED%95%B5%EC%8B%AC%EA%B0%9C%EB%85%90-javascript-flow)  보면서 정리해두기
 
 <br>
 
