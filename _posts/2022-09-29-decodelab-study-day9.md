@@ -142,3 +142,14 @@ HTML 자체 지정된 스타일
 **`addEventListener('focusin', 함수)`** 해당 요소에 포커스(tab)되면 실행
 
 <br>
+
+#### dl, dt, dd
+
+dl(definition) : 정의 목록    
+- 용어를 설명하는 목록
+
+dt(definition term) : 개념, 단어
+
+dd(definition description) : 설명
+
+<br>
