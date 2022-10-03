@@ -78,13 +78,9 @@ function func(_d){
 const a = func('D입니다');
 ```
 
-위의 코드를 실행 후 a.b를 불러오면 undifined가 나온다.
+위의 코드를 실행 후에는 b 값을 전역에서 불러오고 싶어도 불러올 수가 없다.
 
 함수가 종료되면서 내부에 선언된 지역변수가 사라졌기 때문이다.
-
-```javascript
-console.log(a.d); // undifined
-```
 
 <br>
 
