@@ -131,11 +131,11 @@ fetch(url)
 <hr>
 <br><br>
 
-### [기업형 레이아웃](/decodelab/221004/layout_practice/gallery.html)
+### [기업형 레이아웃](/decodelab/221004/layout_practice/youtube.html)
 
 <br>
 
-<iframe src='/decodelab/221004/layout_practice/gallery.html' frameborder='0' width='100%' height='500px'></iframe>
+<iframe src='/decodelab/221004/layout_practice/youtube.html' frameborder='0' width='100%' height='500px'></iframe>
 
 <br>
 
