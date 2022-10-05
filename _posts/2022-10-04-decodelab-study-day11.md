@@ -4,7 +4,7 @@ title:  학원 수업 내용 Day11
 date:   2022-10-04 22:42:23 +0900
 comments : true
 categories: Note
-tags: [decodelab, javascript]
+tags: [decodelab, javascript, youtube, api]
 ---
 
 
