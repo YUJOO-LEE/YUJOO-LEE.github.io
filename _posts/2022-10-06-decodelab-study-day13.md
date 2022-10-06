@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  학원 수업 내용 Day12
-date:   2022-10-05 22:35:23 +0900
+title:  학원 수업 내용 Day13
+date:   2022-10-06 20:35:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript, flickr, api]
