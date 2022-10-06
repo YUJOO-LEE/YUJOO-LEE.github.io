@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  학원 수업 내용 Day11
+title:  학원 수업 내용 Day12
 date:   2022-10-05 22:35:23 +0900
 comments : true
 categories: Note
