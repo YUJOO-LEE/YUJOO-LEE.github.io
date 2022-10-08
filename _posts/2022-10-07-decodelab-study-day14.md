@@ -4,7 +4,7 @@ title:  학원 수업 내용 Day14
 date:   2022-10-07 19:32:23 +0900
 comments : true
 categories: Note
-tags: [decodelab, javascript]
+tags: [decodelab, javascript, validation, cookie]
 ---
 
 자바스크립트 활용도가 점점 높아져서 좋다.
