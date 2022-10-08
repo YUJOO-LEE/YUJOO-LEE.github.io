@@ -7,6 +7,13 @@ categories: Note
 tags: [decodelab, javascript]
 ---
 
+자바스크립트 활용도가 점점 높아져서 좋다.
+
+만드는 페이지가 기능적으로 업그레이드 되는 게 보여서 만족스럽다.
+
+더 많이 배워서 많은 곳에서 활용할 수 있게 되면 좋겠다.
+
+<br>
 
 ### [비밀번호 validation](/decodelab/221007/validation/)
 
@@ -18,14 +25,18 @@ tags: [decodelab, javascript]
 
 #### 입력 비밀번호 보여주기
 
+토글 버튼을 만들어서 클릭시 input type변경해서 입력중인 비밀번호를 확인할 수 있게 한다.
+
+<br>
+
 ```javascript
-$toggleBtn.addEventListener('click', ()=>{
+toggleBtn.addEventListener('click', ()=>{
   if ($pwd.type === 'password') {
-    $pwd.type = 'text';
-    $toggleBtn.classList.add('hide');
+    pwd.type = 'text';
+    toggleBtn.classList.add('hide');
   } else {
-    $pwd.type = 'password';
-    $toggleBtn.classList.remove('hide');
+    pwd.type = 'password';
+    toggleBtn.classList.remove('hide');
   }
 })
 ```
