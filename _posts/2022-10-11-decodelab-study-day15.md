@@ -166,9 +166,7 @@ window.addEventListener('resize', ()=>{
 
 동적인 웹에서 성능이 빨라서 여러 사이트에서 이용하고 있다.
 
-<br><br>
-<hr>
-<br><br>
+<br>
 
 #### 설치 
 
@@ -196,9 +194,7 @@ npm start
 npm run build
 ```
 
-<br><br>
-<hr>
-<br><br>
+<br>
 
 #### 이미지 삽입
 
