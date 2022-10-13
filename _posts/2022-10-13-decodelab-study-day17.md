@@ -29,7 +29,9 @@ npm uninstall router-react-dom
 
 #### 버전 이슈
 
-현재 *22년 10월* 기준 Router v6의 기능이 v5에 비해 상당히 많이 바뀌었는데, 학원에서는 v5 기준으로 학습하므로 v5로 재설치했다.
+현재 *22년 10월* 기준 Router v6의 기능이 v5에 비해 상당히 많이 바뀌었는데, 현재는 v5 기준으로 학습하므로 v5로 재설치했다.
+
+v6이 나온지 얼마 되지 않아 검색해도 대부분 코드가 v5 기준으로 나온다..
 
 *package.json* 파일의 *react-router-dom* 부분에서 router-dom 버전을 수정한 후 `npm i`로 인스톨한다.
 
