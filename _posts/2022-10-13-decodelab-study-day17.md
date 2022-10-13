@@ -107,6 +107,75 @@ NavLink 는 activeStyle, activeClassName 등을 사용 가능하다.
 
 - SEO 최적화 때문에 browserRouter 사용률이 월등히 높다.
 
+<br>
+
+### useEffect()
+
+아래와 같은 특수한 상황에서 작업을 실행시키기 위해 사용한다.
+
+- 컴포넌트가 마운트 되었을 때    
+-- 처음 나타났을 때    
+-- props로 받은 값을 컴포넌트의 로컬 상태로 설정할 때    
+-- 외부 API요청이 있을 때    
+-- setInterval, setTimeout 통해 작업이 예약될 때
+
+- 컴포넌트가 언마운트 되었을 때    
+-- 사라질 때    
+-- clearInterval, clearTimeout 되었을 때    
+-- 라이브러리 인스턴스가 제거 되었을 때    
+
+- 컴포넌트가 업데이트 되었을 때    
+-- 특정 props가 바뀔 때
+
+<br>
+
+#### 사용방법
+
+```javascript
+import { useEffect } from "react";
+
+useEffect(callback, [deps]);
+```
+
+<br>
+
+#### callback
+
+- 랜더링 이후 실행 할 함수.
+
+<br>
+
+#### [deps]
+
+배열의 형태로, 특정한 값이 변경될 때 callback 함수를 실행하고 싶다면 그 식별자를 넣어둔다.
+
+빈 배열을 입력하면 컴포넌트가 마운트 될 때에만 실행되며, 배열도 없이 비워두면 마운트 뿐만이 아니라 업데이트가 될 때에도 실행 된다.
+
+<br>
+
+#### cleanup
+
+callback 함수 내에서 return 함수를 실행하면 컴포넌트가 언마운트 될 때 해당 함수가 실행된다.
+
+`useEffect()` 의 뒷정리 *-이벤트 삭제 등-* 을 해 주어야 할 때 사용한다.
+
+<br>
+
+```javascript
+const frame = useRef(null);
+useEffect(()=>{
+  // 마운트 되었을 때
+  frame.current.classList.add('on');
+  console.log('on');
+
+  return ()=>{
+    // 언마운트 되었을 때 특수경우 아니면 잘 쓰지 않음
+    frame.current.classList.remove('on');
+    console.log('off');
+  }
+}, []);
+// useEffect(콜백함수, 뎁스: 함수 반복시 사용);
+```
 
 <br><br>
 <hr>
