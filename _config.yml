@@ -140,7 +140,7 @@ defaults:
   home:
     heading: "Hello World!!"
     subheading: "어서오세요. 유주로그에!"
-    banner: "/yujoo.jpeg"
+    banner: "/assets/images/banners/home.jpeg"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
@@ -162,7 +162,7 @@ defaults:
 # excerpt_size: 350
 
 # Pagination setting
-# paginate: 5
+paginate: 10
 
 # Disqus comments
 # disqus:
