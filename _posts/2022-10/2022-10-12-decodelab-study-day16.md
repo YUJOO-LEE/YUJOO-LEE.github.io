@@ -82,7 +82,7 @@ function Component(props) {
 
 **State**
 
-- 컴포넌트 자신이 가지고 있는 값으로 `setState()` Hook을 사용해서 변경 가능하다.
+- 컴포넌트 자신이 가지고 있는 값으로 `useState()` Hook을 사용해서 변경 가능하다.
 
 <br> 
 
@@ -93,7 +93,7 @@ function Component(props) {
 
 <br>
 
-#### setState()
+#### useState()
 
 ```javascript
 import { useState } from 'react'; // useState를 react로부터 가져온다 (사용 선언)
