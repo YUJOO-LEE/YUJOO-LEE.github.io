@@ -115,6 +115,22 @@ js 함수 사용과 비슷하게 `@include mixin식별자(인수)`로 넘기고 
 
 `@include` 시 인수가 없으면 기본값으로 적용이 된다.
 
+사이트 내에서 통일해서 사용하고 싶은 버튼 효과도 `@mixin`으로 지정 해 주었다.
+
+```css
+@mixin style-button($shadow-size: 10px, $color: $color-light-gray) {
+  box-shadow: 0 $shadow-size 0 $color;
+  transform: translateY(0);
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover{
+    box-shadow: 0 0 0 $color;
+    transform: translateY($shadow-size);
+  }
+}
+```
+
 <br>
 
 ### 절대경로 import
