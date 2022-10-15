@@ -4,7 +4,7 @@ title:  청약닷컴 UI제작로그 Day1
 date:   2022-10-15 19:42:04 +0900
 comments : true
 categories: Note
-tags: [cheongyak.com, react, portfolio]
+tags: [cheongyak.com, react, portfolio, scss]
 ---
 
 청약닷컴 페이지 만들면서 있었던 좌충우돌 제작로그
