@@ -4,7 +4,7 @@ title:  학원 수업 내용 Day18
 date:   2022-10-13 14:49:04 +0900
 comments : true
 categories: Note
-tags: [decodelab, react]
+tags: [decodelab, react, youtube, api]
 ---
 
 
@@ -327,3 +327,35 @@ useEffect(() => {
 
 <br>
 
+<iframe src='/layout_practice/#/youtube/' frameborder='0' width='100%' height='500px'></iframe>
+
+<br>
+
+#### 종횡비 css 적용
+
+유튜브 영상의 종횡비 고정을 위해 css를 추가했다.
+
+**기존 css**
+
+```css
+.outer{
+  width: 500px;
+  /* 가로 값 지정 */
+  .inner{
+    padding-top: calc(100% / 16 * 9);
+    /* 16:9 비율 */
+  }
+}
+```
+
+**간편해진 css**
+
+```css
+aspect-ratio: 16 / 9;
+```
+
+MDN에 찾아보니 다양한 브라우저에서 다 지원하던데, 브라우저 별 버전에 관한 내용은 잘 모르겠다.
+
+익스플로러는 호환이 되지 않을지도?
+
+<br>
