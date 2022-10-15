@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  학원 수업 내용 Day18
-date:   2022-10-13 14:49:04 +0900
+date:   2022-10-14 14:49:04 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, youtube, api]
