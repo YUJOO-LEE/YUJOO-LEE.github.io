@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  학원 수업 내용 Day22
-date:   2022-10-2 15:43:23 +0900
+date:   2022-10-20 15:43:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, scroll]
