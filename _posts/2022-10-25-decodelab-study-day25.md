@@ -133,11 +133,36 @@ onClick={()=>{
 
 렌더링을 막고 싶다면 하위 컴포넌트 `export` 시 `memo(컴포넌트명)` 를 사용해서 메모리에 넣어둔다.
 
+
+```javascript
+import { memo } from 'react';
+function Child() {
+  return(
+    // 하위 컴포넌트 내용
+  );
+}
+export default memo(Child);
+```
+
 이렇게 메모리에 넣어둔 하위 컴포넌트는 상위 컴포넌트가 다시 렌더링 될 때 상위 컴포넌트로부터 하위 컴포넌트로 보내는 props를 기준으로 렌더링 여부가 정해진다.
 
 props가 기존과 같다면 다시 렌더링 하지 않고 메모리에 저장해 둔 컴포넌트를 그대로 활용하며, props가 기존과 다를 경우에만 렌더링 한다.
 
+```javascript
+import Child from './Child';
+function App() {
+	return (
+    // 상위 컴포넌트 내용
+    // ...
+
+    <Child Counter={Counter}></Child>
+	);
+}
+export default App;
+```
+
+위의 코드를 예시로 들면, props로 넘긴 Counter가 변해야 하위 컴포넌트인 Child가 다시 렌더링 되고, Counter가 아닌 다른 값이 변하는 것에 대해서는 Child는 다시 렌더링 되지 않는다.
+
 컴포넌트가 같은 props로 자주 렌더링되거나 무겁고 비용이 큰 연산이 있는 경우, `memo()` 로 컴포넌트를 래핑할 필요가 있다.
 
 <br>
-
