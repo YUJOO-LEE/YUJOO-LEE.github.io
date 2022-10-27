@@ -4,7 +4,7 @@ title:  gitHub, sass 터미널 명령어 정리
 date:   2022-09-27 18:36:23 +0900
 comments : true
 categories: Note
-tags: [github, linux]
+tags: [github, terminal]
 ---
 
 

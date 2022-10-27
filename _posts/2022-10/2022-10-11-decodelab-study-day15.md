@@ -4,7 +4,7 @@ title:  학원 수업 내용 Day15
 date:   2022-10-11 17:36:23 +0900
 comments : true
 categories: Note
-tags: [decodelab, javascript, kakaomap, api, react]
+tags: [decodelab, javascript, kakaomap, api, react, terminal]
 ---
 
 오전 시간에는 카카오 맵 API 다루기,
