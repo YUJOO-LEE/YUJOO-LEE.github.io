@@ -4,7 +4,7 @@ title:  학원 수업 내용 Day28
 date:   2022-10-30 02:50:57 +0900
 comments : true
 categories: Note
-tags: [decodelab, react, redux, terminal, github]
+tags: [decodelab, react, redux, terminal, generator]
 ---
 
 ### generator
@@ -156,7 +156,7 @@ export const 데이터 = {
 }
 ```
 
-사용 시 `store.데이터.start`와 같은 형태로 사용한다.
+사용 시 types 로 import 해서 `types.데이터.start`와 같은 형태로 사용한다.
 
 <br>
 
@@ -312,6 +312,58 @@ export default store;
 ```
 
 `run()` 으로 동적으로 saga를 실행한다.
+
+<br>
+
+#### store 사용
+
+```javascript
+import { Provider } from 'react-redux';
+```
+
+```jsx
+<Provider store={store}>
+  <App />
+</Provider>
+```
+
+index.js 에서 redux 와 동일하게 Provider 로 store 를 전역에서 사용할 수 있도록 뿌려준다.
+
+<br>
+
+```javascript
+import { useSelector } from 'react-redux';
+
+const 데이터 = useSelector((store)=>{
+  return (store.데이터Reducer.데이터);
+});
+```
+
+데이터를 불러올 컴포넌트에서 `useSelector()` 로 데이터를 불러와 사용한다.
+
+<br>
+
+```javascript
+import { useDispatch } from 'react-redux';
+import * as types from './redux/actionType';
+```
+
+```javascript
+const dispatch = useDispatch();
+
+useEffect(() => {
+  dispatch({
+    type: types.데이터.start,
+    옵션: 옵션객체,
+  });
+}, [])
+```
+
+store 내 데이터 값의 변경이 컴포넌트에서 `useDispatch()` 로 값을 변경한다.
+
+미리 지정해 둔 actionType.js 의 객체도 import 해서 사용하면 오타도 방지되고 가독성도 높일 수 있다.
+
+dispatch 를 App.js 에 적용해두면 전역에서 사용할 데이터의 초기값을 세팅해둘 수 있다.
 
 <br>
 
