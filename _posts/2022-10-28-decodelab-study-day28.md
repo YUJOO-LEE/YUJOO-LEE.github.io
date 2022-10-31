@@ -88,7 +88,230 @@ console.log(내부함수2_실행결과를_담은_변수);
 
 ### Redux-saga
 
-정리중...
+Redux-saga는 Redux의 미들웨어이다.
 
-너무 졸려서 내일 해야지...
+데이터의 상태 관리를 할 수 있는 redux의 비동기 처리를 위해 Redux-saga를 사용한다.
+
+액션을 모니터링하고 있다가, 특정 액션이 발생했을 때 원하는 액션으로 dispatch되게 하거나 원하는 js 코드를 실행할 수 있다.
+
+또한 비동기 작업 시 기존 요청의 취소 처리가 가능하며, API 요청이 실패 했을 때 재요청하는 작업도 할 수 있다.
+
+Redux-saga를 사용할 때에는 [Generator문법](#h-generator)을 사용한다.
+
+<br>
+
+#### 설치
+
+```npm
+npm i redux-saga
+```
+
+redux-saga 를 사용하기 위해서는 redux, react-redux도 설치되어 있어야 한다.
+
+만약 App에 redux가 설치되어 있지 않다면 아래와 같이 한번에 설치할 수도 있다.
+
+```npm
+npm i redux react-redux redux-saga
+```
+
+<br>
+
+#### 파일 생성
+
+src폴더에 redux 로 처리할 순수 함수들만 모아둘 redux 폴더를 만든다.
+
+그리고 redux 폴더 내에 기능에 따라 아래 파일들을 생성한다.
+
+순수 함수란 함수 외부에 직접적인 영향을 주지 않는, 부수효과를 발생시키지 않는 함수를 말한다.
+
+redux 폴더 내부의 함수들은 DOM 또는 컴포넌트를 직접적으로 변경시키지 않는다.
+
+오로지 프로퍼티, 메서드 등을 export 시킬 뿐, DOM 제어는 외부에서 해당 값들을 활용해 제어하도록 한다.
+
+<br>
+
+생성한 파일은 아래와 같다.
+
+- actionType.js
+
+- api.js
+
+- reducers.js
+
+- saga.js
+
+- store.js
+
+<br>
+
+#### actionType.js
+
+액션 타입을 일일이 문자열로 지정하지 않고 편리하게 사용할 수 있도록 객체로 설정한다.    
+
+```javascript
+export const 데이터 = {
+  start: '데이터_START',
+  success: '데이터_SUCCESS',
+  fail: '데이터_FAIL'
+}
+```
+
+사용 시 `store.데이터.start`와 같은 형태로 사용한다.
+
+<br>
+
+#### api.js
+
+실제 데이터를 요청 함수를 모아둔다.
+
+axios 호출이 이 파일 내에서 이루어진다.
+
+```javascript
+import axios from "axios";
+
+export const get데이터 = async ()=>{
+
+  const url = 'API 주소';
+
+  const params = {
+    파라미터_키: 파라미터_값,
+  };
+
+  const 헤더 = {
+    헤더_키: 헤더_값,
+  }
+
+  return await axios.get(url, { params, headers: 헤더});
+}
+```
+
+API 문서에 맞게 aixos 로 호출한 수 export 한다.
+
+<br>
+
+#### reducers.js
+
+action 값을 받아와서 해당 값에 맞는 처리를 하도록 하는 분기점이다.
+
+store 에서 사용할 초기 데이터를 지정할 수 있다.
+
+```javascript
+import { combineReducers } from 'redux';
+import * as types from './actionType'; 
+
+// 초기 데이터를 state 에 저장했다가 action객체가 전달되면 type에 따라서 기존 데이터 변경
+const 데이터Reducer = (state={데이터: []}, action)=>{
+  switch(action.type){
+		case types.데이터.start:
+			return state;
+
+		case types.데이터.success:
+			return { ...state, 데이터: action.payload }
+
+		case types.데이터.fail:
+			return { ...state, 데이터: action.payload }
+
+		default:
+			return state;
+  }
+}
+
+// 각각의 reducer 데이터를 하나로 합쳐서 반환
+const reducers = combineReducers({ 데이터Reducer });
+
+export default reducers;
+
+```
+
+<br>
+
+#### saga.js
+
+모니터링 중인 action 중 가로챌 요청과 실제로 실행할 작업을 설정하는 파일이다.
+
+```javascript
+import { takeLatest, all, put, fork, call } from 'redux-saga/effects';
+import { getFlickr, getYoutube, getMembers } from './api';
+import * as types from './actionType';
+
+function* return데이터({옵션}) {
+  try {
+    const response = yield call(get데이터, 옵션);
+    yield put({type: types.데이터.success, payload: response.data.데이터});
+  } catch (error) {
+    yield put({type: types.데이터.fail, payload: error});
+  }
+}
+
+function* call데이터() {
+  yield takeLatest(types.데이터.start, return데이터);
+}
+
+// store.js 에 의해 reducer에 미들웨어로 적용할 rootSaga 함수 생성
+export default function* rootSaga(){
+  yield all([fork(call데이터)]);
+}
+```
+
+아래는 saga에서 사용하는 주요 메서드들이다.
+
+- `takeLatest(액션이름, 함수)`    
+첫번째 인자로 입력한 액션에 대해 이미 진행 중인 작업이 있으면 취소하고 가장 마지막으로 실행되었을 때만 두번째 인자의 함수를 실행한다.
+
+- `takeEvery(액션이름, 함수)`    
+첫번째 인자로 입력한 모든 액션에 대해 두번째 인자의 함수를 실행한다.
+
+- `all([제너레이터1, 제너레이터2...])`    
+`Promise.all()` 과 유사하다.    
+인자에 배열로 입력된 제너레이터 함수들이 모두 resolve 될 때까지 기다린다.
+
+- `call(호출함수, 옵션)` 
+함수를 동기적으로 실행한다.   
+주로 axios 함수를 호출할 때 사용한다.    
+위 코드에서도 api.js 에서 생성한 함수를 호출했다.
+두번째 인자로 파라미터 등 옵션값을 전달할 수 있다.
+
+- `put({type: 액션, payload: 데이터})`
+redux 의 `dispatch()` 와 같은 역할을 한다.
+
+- `fork (saga명령어 실행 함수)`
+`call()` 과 유사하게 함수를 실행하는 메서드이다.
+`call()` 은 동기적으로 함수를 실행시키는 반면, `fork()` 는 비동기적으로 함수를 실행시킨다.
+여러 개 결합 시 결합된 부모가 명령을 종료하면 진행중이던 작업을 취소하고 종료한다.
+
+<br>
+
+#### store.js
+
+store 공간을 생성하고, saga에서 생성한 액션 객체를 reducer에 반영해서 store에 저장하도록 설정한다.
+
+```javascript
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducer';
+```
+
+redux 에서 미들웨어 실제 사용을 위해 `applyMiddleware` 메서드를 import 한다.
+
+```javascript
+import createSagaMiddleware from '@redux-saga/core';
+import rootSaga from './saga';
+```
+
+적용할 saga파일 또한 Import한다.
+
+```javascript
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(reducers, applyMiddleware(sagaMiddleware));
+```
+
+store 공간에 reducers와 함께 saga 미들웨어도 함께 연결해서 생성한다.
+
+```javascript
+sagaMiddleware.run(rootSaga);
+export default store;
+```
+
+`run()` 으로 동적으로 saga를 실행한다.
+
+<br>
 
