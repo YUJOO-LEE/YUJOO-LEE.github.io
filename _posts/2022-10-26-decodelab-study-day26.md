@@ -32,6 +32,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 그리고 동작을 원하는 태그 외부를 `AnimatePresence`으로 감싸고, 태그 자체에 `motion.`을 추가한다.
 
 ```JSX
+{% raw %}
 <AnimatePresence>
   <motion.aside
     initial={{opacity: 0}} 
@@ -40,6 +41,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   >
   </motion.aside>
 </AnimatePresence>
+{% endraw %}
 ```
 
 이제 aside는 태그 내 속성값만 넣어주면 framer-motion에 의해 애니메이션이 제어가 된다.
