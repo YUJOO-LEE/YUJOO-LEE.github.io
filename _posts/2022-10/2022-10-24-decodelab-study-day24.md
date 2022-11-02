@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day24
+title:  flickr API (리액트), masonry, loading 처리
 date:   2022-10-24 23:19:13 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, flickr, api, masonry, loading]
 ---
 
+학원 수업 Day24
 
 ### Flickr API
 

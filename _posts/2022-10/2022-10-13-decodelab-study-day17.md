@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day17
+title:  리액트 라우터 (Router) 버전 이슈, useEffect
 date:   2022-10-13 16:13:14 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, router]
 ---
+
+학원 수업 Day17
 
 ### Router
 

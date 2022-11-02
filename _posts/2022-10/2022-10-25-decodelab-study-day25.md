@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day25
+title:  forwardRef, useImperativeHandle, memo, useMemo, lodash
 date:   2022-10-25 10:21:02 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, flickr, api, hook, lodash]
 ---
 
+학원 수업 Day25
 
 ### Flickr API
 

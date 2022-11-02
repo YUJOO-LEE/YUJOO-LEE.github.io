@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day9
+title:  string, style 관련 메서드, 탭메뉴 제작
 date:   2022-09-29 22:47:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript]
 ---
 
+학원 수업 Day9
 
 ### String
 

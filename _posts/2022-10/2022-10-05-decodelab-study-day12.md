@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day12
+title:  flickr API 활용
 date:   2022-10-05 22:35:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript, flickr, api]
 ---
 
+학원 수업 Day12
 
 ### [플리커 API 활용](/decodelab/221005/flickr/)
 

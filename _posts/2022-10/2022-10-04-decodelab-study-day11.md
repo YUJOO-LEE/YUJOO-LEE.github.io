@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day11
+title:  iframe, youtube API, swiper.js 활용
 date:   2022-10-04 22:42:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript, youtube, api]
 ---
 
+학원 수업 Day11
 
 ### iframe관련
 

@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  학원 수업 내용 Day1
+title:  css float, 12 grid system, margin 역상속
 date:   2022-09-20 09:05:53 +0900
 comments : true
 categories: Note
 tags: [decodelab, css, float, viewport]
 ---
 
+학원 수업 내용 Day1
 
-9월 19일 첫번째 수업내용
+<br>
 
 CSS - float 을 활용한 레이아웃 만들기가 주된 내용이었다.
 

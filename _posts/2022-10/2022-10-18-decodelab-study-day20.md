@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day20
+title:  validation (리액트), useHistory
 date:   2022-10-18 21:52:02 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, validation, hook]
 ---
 
+학원 수업 Day20
 
 ### validation
 

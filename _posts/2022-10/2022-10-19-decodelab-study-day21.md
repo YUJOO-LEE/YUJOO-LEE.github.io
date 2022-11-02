@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day21
+title:  local storage 활용
 date:   2022-10-19 15:18:11 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, localstorage]
 ---
 
+학원 수업 Day21
 
 ### Community 페이지
 

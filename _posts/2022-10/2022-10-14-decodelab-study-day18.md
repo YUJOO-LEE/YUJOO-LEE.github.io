@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day18
+title:  axios, Popup 컴포넌트 활용, css 종횡비 지정
 date:   2022-10-14 14:49:04 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, youtube, api]
 ---
 
+학원 수업 Day18
 
 ### useState() 복습
 

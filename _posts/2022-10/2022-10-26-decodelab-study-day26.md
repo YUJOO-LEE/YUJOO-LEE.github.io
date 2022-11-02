@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day26
+title:  framer motion 활용, 이미지/비디오 캐싱 및 로딩 상태 구현
 date:   2022-10-26 16:54:01 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, framer, animation, api, hook]
 ---
 
+학원 수업 Day26
 
 ### Framer Motion
 
@@ -217,6 +218,20 @@ function createDOM() {
 배열로 저장해 둔 이미지, 비디오를 DOM요소로 생성해서 defaults에 넣는다.
 
 이렇게만 해도 이미 이미지와 비디오들은 페이지 오픈 시 미리 한번에 캐싱하게 된다.
+
+##### 11/2 내용추가
+
+아이폰에서 페이지를 열면 동영상을 불러올 수 없어서 로딩화면이 사라지지 않는 현상을 발견했다.
+
+`video` 에 `autoplay muted playinline` 속성을 넣어주면 해결된다.
+
+```javascript
+function createDOM() {
+  imgs.forEach(src=>tags+=`<img src=${src} />`);
+  vids.forEach(src=>tags+=`<video src=${src} autoplay muted playinline></video>`);
+  defaults.innerHTML = tags;
+}
+```
 
 <br>
 

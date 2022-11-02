@@ -1,11 +1,15 @@
 ---
 layout: post
-title:  학원 수업 내용 Day7
+title:  target, currentTarget, HTML5 table
 date:   2022-09-27 19:05:23 +0900
 comments : true
 categories: Note
 tags: [decodelab]
 ---
+
+학원 수업 내용 Day7
+
+<br>
 
 오늘은 지난번에 만든 예제를 완성시키는 수업이었다.
 

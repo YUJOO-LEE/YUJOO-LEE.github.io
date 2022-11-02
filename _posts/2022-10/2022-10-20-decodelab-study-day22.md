@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day22
+title:  스크롤 이벤트 구현
 date:   2022-10-20 15:43:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, scroll]
 ---
 
+학원 수업 Day22
 
 ### scroll event
 

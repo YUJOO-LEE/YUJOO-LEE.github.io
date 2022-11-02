@@ -1,14 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day2
+title:  css filter, transform, animation, mediaquery
 date:   2022-09-20 22:32:53 +0900
 comments : true
 categories: Note
 tags: [decodelab, css, transform, animation, mediaquery]
 ---
 
-
-9월 20일 2일째 수업내용
+학원 수업 Day2
 
 css transform, animation이 주된 내용이었다.
 

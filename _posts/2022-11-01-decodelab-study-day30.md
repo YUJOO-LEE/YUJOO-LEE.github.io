@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  학원 수업 내용 Day30
+title:  커스텀 슬라이드 (css, forwardRef hook활용)
 date:   2022-11-01 22:47:54 +0900
 comments : true
 categories: Note
-tags: [decodelab, javascript]
+tags: [decodelab, javascript, css, react, hook]
 ---
 
+학원 수업 Day30
 
-### 커스텀 슬라이드(/decodelab/221101/custom_slider/)
+### [커스텀 슬라이드](/decodelab/221101/custom_slider/)
 
 <br>
 

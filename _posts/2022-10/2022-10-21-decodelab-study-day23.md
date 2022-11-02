@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day23
+title:  동기와 비동기, promise, async/await, 객체지향
 date:   2022-10-21 20:03:13 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, scroll]
 ---
 
+학원 수업 Day23
 
 ### 동기, 비동기
 

@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day27
+title:  redux 설치, 사용방법, useSelector, useDispatch
 date:   2022-10-27 14:15:21 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, redux, terminal, github]
 ---
+
+학원 수업 Day27
 
 ### git Clone
 

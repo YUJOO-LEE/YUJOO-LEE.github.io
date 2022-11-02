@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day15
+title:  카카오 맵 API, 비구조화 할당, 리액트 설치
 date:   2022-10-11 17:36:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript, kakaomap, api, react, terminal]
 ---
+
+학원 수업 Day15
 
 오전 시간에는 카카오 맵 API 다루기,
 

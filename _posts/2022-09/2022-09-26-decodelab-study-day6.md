@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  학원 수업 내용 Day6
+title:  script 연결, 자바스크립트 기본
 date:   2022-09-26 18:19:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript]
 ---
 
+학원 수업 내용 Day6
+
+<br>
 
 드디어 오늘부터 JS를 시작했다.
 

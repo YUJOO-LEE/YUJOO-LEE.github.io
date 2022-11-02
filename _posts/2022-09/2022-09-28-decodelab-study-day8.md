@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  학원 수업 내용 Day8
+title:  swiper.js, isotope.js 활용, vanilla js slider
 date:   2022-09-28 20:12:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript]
 ---
 
+학원 수업 내용 Day8
+
+<br>
 
 js플러그인 ([swiper.js](https://swiperjs.com/), [isotope.js](https://www.npmjs.com/package/isotope-layout))을 활용한 레이아웃 2개,
 

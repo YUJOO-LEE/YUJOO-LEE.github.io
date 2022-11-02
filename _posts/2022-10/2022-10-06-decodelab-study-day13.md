@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day13
+title:  회원가입 validation
 date:   2022-10-06 20:35:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript, flickr, api, validation]
 ---
 
+학원 수업 Day13
 
 ### [flickr 갤러리 적용](/decodelab/221006/layout_practice/gallery.html)
 

@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  학원 수업 내용 Day5
+title:  css 선택자, flex, 아코디언 메뉴(appearance)
 date:   2022-09-23 18:00:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, css, flex, layout, faq]
 ---
 
+학원 수업 내용 Day5
+
+<br>
 
 오늘 진짜 알차고 보람찼다!
 

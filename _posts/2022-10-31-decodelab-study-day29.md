@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day29
+title:  Redux-toolkit 설치, 사용
 date:   2022-10-31 23:52:16 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, redux, terminal]
 ---
 
+학원 수업 Day29
 
 ### redux-toolkit
 

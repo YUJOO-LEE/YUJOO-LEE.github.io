@@ -1,17 +1,19 @@
 ---
 layout: post
-title:  학원 수업 내용 Day16
+title:  리액트 렌더링, useState, useRef
 date:   2022-10-12 22:02:03 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, hook]
 ---
 
-### 리액트 랜더링
+학원 수업 Day16
+
+### 리액트 렌더링
 
 **SSR (Server Side Rendering)**
 
-- 브라우저가 서버에 각각의 html 파일을 요청해서 화면을 랜더링한다.    
+- 브라우저가 서버에 각각의 html 파일을 요청해서 화면을 렌더링한다.    
 -- 초기 로딩 속도 빠르다.    
 -- 페이지 이동시 화면이 깜빡임, 변경될 필요 없는 공통영역까지 모조리 변경한다.
 
@@ -19,7 +21,7 @@ tags: [decodelab, react, hook]
 
 **CSR (Client Side Rendering)**
 
-- 모든 컴포넌트를 jsx 자바스크립트 파일 형태로 초기 로딩시 모두 불러와서 랜더링한다.    
+- 모든 컴포넌트를 jsx 자바스크립트 파일 형태로 초기 로딩시 모두 불러와서 렌더링한다.    
 -- 메뉴 이동 시 부드럽게 실시간으로 서브 컨텐츠를 보여준다. (서버에 요청할 필요가 없음)    
 -- 변경될 부분만 실시간으로 바꿔준다. (이미 불러온 컴포넌트로 교체)    
 -- 초기 로딩 속도가 비교적 느리다.

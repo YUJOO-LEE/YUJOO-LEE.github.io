@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  학원 수업 내용 Day4
+title:  sass 설치 및 활용
 date:   2022-09-22 23:33:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, sass, layout]
 ---
 
+학원 수업 내용 Day4
+
+<br>
 
 그동안 독학으로 공부했던 내용들이 나와서 뭔가 심심한 느낌이었는데, 오늘 드디어 안해본걸 배웠다.
 

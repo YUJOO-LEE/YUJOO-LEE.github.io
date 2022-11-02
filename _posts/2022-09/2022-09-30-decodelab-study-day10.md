@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day10
+title:  data 속성, 무한 루프 슬라이드, 멀티 슬라이드, 스크롤 이벤트
 date:   2022-09-30 18:02:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript]
 ---
+
+학원 수업 내용 Day10
 
 ### DOM 구조 변경
 

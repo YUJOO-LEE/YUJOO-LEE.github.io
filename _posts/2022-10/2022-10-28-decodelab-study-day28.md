@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  학원 수업 내용 Day28
+title:  generator 함수, redux-saga 설치, 사용방법
 date:   2022-10-30 02:50:57 +0900
 comments : true
 categories: Note
 tags: [decodelab, react, redux, terminal, generator]
 ---
+
+학원 수업 Day28
 
 ### generator
 
