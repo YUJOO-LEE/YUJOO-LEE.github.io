@@ -8,7 +8,9 @@
       tags.push(['{{ tag[0] | replace:'-', ' ' }}', {{ tag | last | size }}]);
     {% endfor %}
 
-    let tagCloudWords = tags.map(w => {
+    let tagCloudWords = tags.filter(w=>
+      w[1] > 1
+    ).map(w => {
       return {
         text: w[0], weight: w[1], link: updateQueryString(w[0])
       };
