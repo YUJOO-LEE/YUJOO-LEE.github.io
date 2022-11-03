@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  Node Express로 MongoDB와 react 연결
+title:  Node Express, axios로 MongoDB와 react 연결
 date:   2022-11-03 12:49:02 +0900
 comments : true
 categories: Note
-tags: [decodelab, node, terminal, mongoDB, react]
+tags: [decodelab, node, terminal, mongoDB, react, axios]
 ---
 
 학원 수업 Day32
