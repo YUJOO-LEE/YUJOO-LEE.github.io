@@ -193,7 +193,7 @@ module.exports = (app) => {
 npm i axios
 ```
 
-DB의 데이터를 이용하기 위해 axios를 설치한다.
+DB의 데이터를 송수신하기 위해 react 에 axios를 설치한다.
 
 설치 후 axios 로 데이터를 송신할 수 있다.
 
@@ -207,6 +207,10 @@ import { useEffect } from 'react';
 먼저 aixos 사용을 위해 axios 를 import 하고, 마운트 시 송신하기 위해 `useEffect()` 도 import 한다.
 
 ```javascript
+const 데이터 = {
+  name: 'yujoo'
+}
+
 useEffect(()=>{
   axios.post('/api/send', 데이터).then(response=>{
     console.log(response);
@@ -218,6 +222,36 @@ useEffect(()=>{
 ```
 
 위에서 지정했던 api 경로에서 더욱 세분화하기 위해 send 경로까지 지정해주었고 두번째 인자로 송신을 원하는 데이터를 넘긴다.
+
+<br>
+
+이제 클라이언트에서 보낸 데이터를 서버에서 받을 수 있다.
+
+node 폴더의 index.js 에서 아래 코드로 클라이언트에서 보내는 데이터를 받도록 설정한다.
+
+```javascript
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+```
+
+그리고 같은 파일 하단에 아래 코드를 추가한다.
+
+```javascript
+app.post('/api/send', (request, response)=>{
+  console.log(request.body);
+  response.json({success: true, result: request.body});
+})
+```
+
+post 를 사용해 '/api/send' 경로로 요청이 들어왔다면 내부 함수에서 결과를 처리한다.
+
+여기에서 `request.body` 가 요청 들어온 값이다.
+
+서버쪽의 코드이기 때문에 `console.log()` 를 사용하면 브라우저가 아닌 node 콘솔에 찍힌다.
+
+`response.json()` 을 사용하면 클라이언트쪽으로 넘어가게 된다.
+
+앞에 클라이언트 쪽에서 `then()` 구문으로 성공 시 결과값을 `console.log()` 로 출력시켰으므로 결과값이 브라우저에 보여지게 된다.
 
 <br>
 
