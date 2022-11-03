@@ -187,7 +187,7 @@ module.exports = (app) => {
 
 <br>
 
-#### axios
+### axios
 
 ```terminal
 npm i axios
@@ -252,6 +252,65 @@ post 를 사용해 '/api/send' 경로로 요청이 들어왔다면 내부 함수
 `response.json()` 을 사용하면 클라이언트쪽으로 넘어가게 된다.
 
 앞에 클라이언트 쪽에서 `then()` 구문으로 성공 시 결과값을 `console.log()` 로 출력시켰으므로 결과값이 브라우저에 보여지게 된다.
+
+
+<br>
+
+#### Schema
+
+데이터베이스에 저장하기 전에 저장될 자료 형식이나 키값을 강제하는 시스템적인 틀인 스키마를 생성한다.
+
+```javascript
+const mongoose = require('mongoose');
+
+const postSchema = new mongoose.Schema({
+  title: String,
+  content: String
+});
+
+const Post = mongoose.model('Post', postSchema);
+module.exports = { Post };
+```
+
+객체형태로 각 키에 해당하는 값의 데이터 타입을 지정준다.
+
+그리고 `mongoose.model()` 으로 저장될 collection 과 스키마를 지정한다.
+
+export 시키면 데이터를 받아오는 node/index.js 에서 불러와서 사용할 수 있다.
+
+<br>
+
+#### DB로 데이터 전송
+
+node/index.js 에서 생성한 Post 를 불러온다.
+
+```javascript
+const { Post } = require('./model/postSchema.js')
+```
+
+앞에 생성했던 `app.post()` 내에서 데이터를 받아 schema 객체로 생성한 후 `save()` 처리한다.
+
+```javascript
+const PostModel = new Post({
+  title: request.body.title,
+  content: request.body.content
+})
+```
+
+생성된 객체 저장은 `객체.save()` 이나 결과 상태 반환을 위해 `then()` , `catch()` 문까지 추가해준다.
+
+```javascript
+PostModel.save()
+  .then(()=>{
+    response.json({success: true, result: request.body});
+  })
+  .catch(error=>{
+    console.log(error);
+    response.json({success: false})
+  });
+```
+
+클라이언트에서 input 등으로 title, content 등의 값을 post로 보내면 DB에 저장이 되는 것을 확인할 수 있다.
 
 <br>
 
