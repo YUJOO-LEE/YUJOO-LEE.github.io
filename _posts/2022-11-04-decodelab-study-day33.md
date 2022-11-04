@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  MongoDB로 커뮤니티 게시판 만들기
+title:  Node-express,MongoDB,react로 커뮤니티 게시판 만들기
 date:   2022-11-03 12:49:02 +0900
 comments : true
 categories: Note
