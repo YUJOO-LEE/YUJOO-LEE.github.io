@@ -19,6 +19,8 @@ gitHub 업로드시에도 node, react 두 폴더가 모두 업로드 될 수 있
 
 node 세팅을 위해 node 폴더로 이동해 node express 을 설치 후 세팅한다.
 
+node express 는 서버 개발을 간편하게 할 수 있도록 하는 프레임워크이다.
+
 먼저 아래 명령어로 package.js 을 초기값으로 생성한다.
 
 ```terminal
@@ -133,7 +135,7 @@ app.get('/', (request, response)=>{
 
 Node.js로 DB에 연결하기 위해 [Mongo DB](https://www.mongodb.com/) 사이트에 회원가입 후 cloud DB를 생성한다.
 
-그리고 편리하게 연결하기 위해 node 폴더에서 Mongoose를 설치한다.
+그리고 편리하게 연결하기 위해 node 폴더에서 Mongoose 라이브러리를 설치한다.
 
 ```terminal
 npm i mongoose --save
