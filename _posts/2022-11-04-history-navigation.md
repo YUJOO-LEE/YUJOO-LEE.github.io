@@ -82,7 +82,7 @@ replace 를 true로 주면 `history.replace()` 와 같이 현재 URL의 기록�
 <hr>
 <br><br>
 
-#### 값 넘겨받기
+### 값 넘겨받기
 
 `<BrowserRouter>` 나 `<HashRouter>` 안의 Route로 감싸진 컴포넌트는 props 안에 history, location, match 가 기본적으로 포함되어 있다.
 
