@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  router 이동 시 props 넘기기
+title:  useHistory, useNavigate, useLocation, props 넘기기
 date:   2022-11-04 09:02:02 +0900
 comments : true
 categories: Note
