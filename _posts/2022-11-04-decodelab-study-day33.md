@@ -4,7 +4,7 @@ title:  MongoDB로 커뮤니티 게시판 만들기
 date:   2022-11-03 12:49:02 +0900
 comments : true
 categories: Note
-tags: [decodelab, node, terminal, mongoDB, react, axios]
+tags: [decodelab, node, mongoDB, react, axios]
 ---
 
 학원 수업 Day33
@@ -106,7 +106,9 @@ mongoDB에서 _id 로 고유 아이디 값을 생성하므로 key 값으로 지�
 
 자동으로 생성되는 _id 는 랜덤한 숫자구조로 노출되기에 적절.. 예쁘지 않아서 communityList라는 이름으로 고유값을 만들어서 사용할 예정이다.
 
-<br>
+<br><br>
+<hr>
+<br><br>
 
 ### 게시글 작성
 
@@ -252,7 +254,95 @@ const handleCreate = ()=>{
 </Layout>
 ```
 
-input값을 state로 지정하고, onChange시 state값이 변경되도록 한다.
+input값을 state로 지정하고, onChange시 state값이 변경되도록 이벤트를 지정한다.
+
+<br><br>
+<hr>
+<br><br>
+
+### 게시글 내용 출력
+
+리스트에서 제목 글릭 시 게시글 내용 페이지로 이동해 글 내용을 불러온다.
+
+#### back-end
+
+```javascript
+app.post('/api/detail', (request, response)=>{
+  Post.findOne({communityNum: request.body.num})
+    .exec()
+    .then(doc=>{
+      response.json({success: true, detail: doc});
+    })
+    .catch(error=>{
+      console.log(error);
+      response.json({success: false});
+    })
+})
+```
+
+리스트 출력과 비슷한 양식이나 find() 가 아닌 findOne() 으로 조건에 따른 한가지 document 만 불러온다.
+
+쿼리스트링으로 document 별 고유값으로 만들어 줬던 communityNum 을 보내줄 예정이기 때문에 그 값을 받아와서 출력 조건으로 사용한다.
+
+그리고 성공 시 detail 이라는 키값으로 반환한다.
+
+<br>
+
+#### front-end
+
+```javascript
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+```
+
+마운트 시 데이터를 통신해야 하므로 useEffect와 axios, 받아온 데이터를 담을 useState, 그리고 리스트에서 클릭 시 넘겨준 쿼리스트링 값을 사용해야 하기 때문에 useParams 을 `import` 한다.
+
+```javascript
+const [ Detail, setDetail ] = useState(null);
+const params = useParams();
+
+const item = {
+  num: params.num
+}
+```
+
+`useState()` 로 State를 생성하고, `useParams()` 로 게시물의 고유 id 값을 받아온 쿼리 스트링을 params으로 가져와서 변수에 담아준다.
+
+
+```javascript
+useEffect(()=>{
+  axios.post('/api/community/detail', item)
+    .then(response=>{
+      if (response.data.success) {
+        console.log(response.data.detail);
+        setDetail(response.data.detail);
+      }
+    })
+    .catch(error=>{
+      console.log(error);
+    })
+}, []);
+```
+
+마운트 시 데이터를 받아와야 하므로 `useEffect()` 으로 게시글 데이터를 가져오는 경로에 연결한다.
+
+`post()` 의 두번째 인자값으로 앞에서 미리 정의해둔 쿼리스트링이 담긴 객체를 보내면 back-end 에서 해당 값으로 게시물을 검색해서 반환 해 줄 것이다.
+
+반환된 데이터를 State 에 저장해서 사용하면 된다.
+
+```javascript
+<Layout name='Detail'>
+  {Detail &&
+    <>
+      <h2>{Detail.title}</h2>
+      <p>{Detail.content}</p>
+    </>
+  }
+</Layout>
+```
+
+State 기본값이 null 이므로 출력 조건을 걸어주고 State 값이 null 이 아닐경우 데이터를 출력하도록 작성한다.
 
 <br>
 
