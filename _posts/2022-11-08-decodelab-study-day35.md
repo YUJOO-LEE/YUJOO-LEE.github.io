@@ -363,9 +363,70 @@ const handleLogin = async ()=>{
       setErr('로그인에 실패했습니다.')
     }
   }
-
 }
 ```
 
-<br>
+<br><br>
+<h1>
+<br><br>
 
+### login 출력, logout 처리
+
+Header에서 로그인 시 로그인/회원가입 버튼을 지우고 로그인 상태 및 로그아웃 버튼을 출력하기 위해 아래 메서드들을 `import` 한다.
+
+```javascript
+import { useDispatch, useSelector } from 'react-redux';
+import { logoutUser } from '../redux/userSlice';
+import firebase from '../firebase';
+```
+
+store 에 저장된 유저 정보를 받아온다.
+
+```javascript
+const User = useSelector(store=> store.user);
+```
+
+store 에 저장된 유저 정보의 유무에 따른 조건으로 화면을 출력한다.
+
+로그아웃 버튼에는 로그아웃 이벤튼 핸들을 연결한다.
+
+```jsx
+{User.accessToken 
+? 
+  <>
+    {User.displayName} 님 환영합니다. 
+    <Link onClick={handleLogout}>Logout</Link>
+  </>
+:
+  <>
+    <NavLink to='/login'
+      style={({isActive})=> isActive ? activeStyle : null}>
+      Login
+    </NavLink>
+    <NavLink to='/join'
+      style={({isActive})=> isActive ? activeStyle : null}>
+      Join
+    </NavLink>
+  </>
+}
+```
+
+로그아웃 핸들 이벤트를 작성한다.
+
+a 태그를 사용해서 `e.preventDefault()` 를 해주었는데, 다른 태그라면 불필요할 것이다.
+
+firebase의 `signOut()` 메서드로 로그아웃 처리를 하고 dispatch() 로 logoutUser() 함수를 호출해서 store를 비워준다.
+
+```javascript
+const handleLogout = (e)=>{
+  e.preventDefault();
+  firebase.auth().signOut();
+  dispatch(logoutUser());
+  alert('로그아웃 되었습니다.');
+  navigate('/');
+}
+```
+
+로그아웃 메세지 출력 후 페이지를 이동시킨다.
+
+<br>
