@@ -144,6 +144,8 @@ npm i mongoose --save
 그리고 node 폴더의 index.js 의 `app.listen()` 부분을 아래와 같이 수정한다.
 
 ```javascript
+const mongoose = require('mongoose');
+
 app.listen(port, ()=>{
   mongoose.connect('mongodb+srv://<아이디>:<비밀번호>@cluster0.f8z7pj4.mongodb.net/?retryWrites=true&w=majority')
     // MongoDB 사이트에서 제공하는 주소
