@@ -48,9 +48,11 @@ export default firebase;
 
 로그인 상태를 redux-toolkit 으로 관리하기 위해 react 폴더에서 npm 명령어를 이용해 redux-toolkit 과 react-redux 를 설치한다.
 
+
 ```terminal
 npm i react-redux @reduxjs/tookit
 ```
+
 
 Slice 파일을 생성해서 `createSlice()` 메서드로 초기값과 리듀서를 생성한다.
 
