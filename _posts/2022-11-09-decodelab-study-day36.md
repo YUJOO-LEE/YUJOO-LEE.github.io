@@ -9,13 +9,13 @@ tags: [decodelab, node, mongoDB, react, terminal]
 
 학원 수업 Day36
 
-node-express를 이용해 서버를 구축해서 DB를 연결한 동적인 페이지는 github에 배포할 수 없으므로 Heroku 를 이용했다.
+node-express 로 구축해서 DB를 연결한 동적인 페이지는 github에 배포할 수 없으므로 Heroku 를 이용했다.
 
 <br>
 
 ### [Heroku](https://herokuapp.com/)
 
-헤로쿠는 여러 프로그래밍 언어를 지원하는 Paas(Platform as a Service, 서비스로서의 플랫폼) 이다.
+헤로쿠는 여러 프로그래밍 언어를 지원하는 PaaS(Platform as a Service, 서비스로서의 플랫폼) 이다.
 
 여기서 PaaS 가 무엇인지 궁금해졌다.
 
@@ -25,7 +25,7 @@ node-express를 이용해 서버를 구축해서 DB를 연결한 동적인 페�
 
 하지만 최근에는(사실은 내가 모르는 오래 전 부터) 클라우드 컴퓨팅 서비스를 통해, 하드웨어나 소프트웨어 등의 자원을 직접 소유하지 않고 업체에서 제공하는 자원을 이용할 수 있게 되었다.
 
-그리고 이 서비스는 이용하는 자원의 범위에 따라 크게 SaaS, IaaS, PaaS 로 분류한다.
+그리고 이 서비스는 제공/이용하는 자원의 범위에 따라 크게 SaaS, IaaS, PaaS 로 분류한다.
 
 <br>
 
