@@ -23,7 +23,7 @@ tags: [decodelab, javascript]
 
 <br>
 
-`IntersectionObserver()`는 현재 뷰포트에 보이거나 사라지는 요소들의 변화를 자동 감지해 다양한 정보값을 반환한다.
+`IntersectionObserver()`는 DOM 엘리먼트가 뷰포트상에 노출되었는지 여부를 비동기적으로 감시하는 API이다. 
 
 스크롤 좌표값에 따라 스타일을 적용하는 대신, `IntersectionObserver()`를 활용해 현재 화면에 보여지고 있는지 여부에 따라 스타일을 적용할 수 있다.
 
@@ -32,10 +32,16 @@ tags: [decodelab, javascript]
 옵저버 생성 시 인자로 변경값에 대한 실행 함수를 입력한다.
 
 ```javascript
+const options = {
+  root: section,
+  rootMargin: '0px',
+  threshold: 1.0
+}
+
 const observer = new IntersectionObserver((entries)=>{
   console.log(entries);
   // entries : 옵저버에 등록된 요소들이 배열 형태로 반환됨
-}, { threshold: 1})
+}, options)
 ```
 
 이렇게 생성한 옵저버에 감시 요소를 등록한다.
@@ -44,7 +50,10 @@ const observer = new IntersectionObserver((entries)=>{
 observer.observe(등록할 요소);
 ```
 
-- 배열으로 반환된 요소별 정보값   
+<br>
+
+#### 반환된 정보값
+
 -- boundingClientRect : 감시 요소의 가로, 세로, 위치, 넚이, 높이    
 -- intersectionRatio : 감시 요소의 현재 화면에서 보이는 영역 비율    
 -- intersectionRect : 현재 보이는 부분에 대한 정보    
@@ -52,6 +61,19 @@ observer.observe(등록할 요소);
 -- rootBounds : 감시 요소의 상위 요소의 정보    
 -- target : 감시 대상 요소    
 -- time : 로드된 시점부터 감시 요소의 상태가 변경되기 까지의 시간    
+
+<br>
+
+#### 옵션
+
+- root    
+-- 뷰포트 대신 사용할 요소 객체(루트 요소)를 지정한다.
+-- 기본값은 null 으로, null 입력 시 브라우저 뷰포트가 지정된다. 
+
+- rootMargin    
+-- margin 값을 주어 Root 범위를 확장하거나 축소할 수 있다.    
+-- 기본값은 0px 0px 0px 0px이며 단위를 꼭 입력해야 한다.    
+-- css와 같이 TOP, RIGHT, BOTTOM, LEFT 순으로 입력한다.
 
 - threshold    
 -- 화면에 보여지는 비율 지정 (0-1)    
@@ -71,6 +93,10 @@ entries.forEach((entry)=>{
 `classList.toggle()` 메서드는 첫번째 인자로 추가/제거 될 클래스 명을 입력하고, 두번째 인자로 변경될 조건을 입력한다.
 
 isIntersecting 값은 boolean 으로 반환되므로 해당 값의 true/false 에 따라 'on' 클래스가 붙게 된다.
+
+<br>
+
+더이상 옵저버를 쓰지 않을 때, 예를 들어 리액트에서 컴포넌트 언마운트 시에는 `옵저버.disconnect()` 로 종료시켜주는 것이 좋다.
 
 <br><br>
 <hr>
