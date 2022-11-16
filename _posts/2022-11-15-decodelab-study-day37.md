@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Z축 스크롤, 입체 큐브, 반전 이펙트 커서
+title:  IntersectionObserver, Z축 스크롤, 입체 큐브, 반전 이펙트 커서
 date:   2022-11-15 17:34:23 +0900
 comments : true
 categories: Note
