@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Z축 스크롤, 입체 큐브, 반전 이펙트 커서
-date:   2022-11-09 17:34:23 +0900
+date:   2022-11-15 17:34:23 +0900
 comments : true
 categories: Note
 tags: [decodelab, javascript]
@@ -15,7 +15,68 @@ tags: [decodelab, javascript]
 <hr>
 <br><br>
 
-#### Z 스크롤 [링크](/decodelab/221115/z_scroll/)
+### Intersection Observer [링크](/decodelab/221115/intersection_observer/)
+
+<br>
+
+<iframe src='/decodelab/221115/intersection_observer/' frameborder='0' width='100%' height='500px'></iframe>
+
+<br>
+
+`IntersectionObserver()`는 현재 뷰포트에 보이거나 사라지는 요소들의 변화를 자동 감지해 다양한 정보값을 반환한다.
+
+스크롤 좌표값에 따라 스타일을 적용하는 대신, `IntersectionObserver()`를 활용해 현재 화면에 보여지고 있는지 여부에 따라 스타일을 적용할 수 있다.
+
+`IntersectionObserver()`를 선언해두면 변경점이 생길 때 마다 다시 실행한다.
+
+옵저버 생성 시 인자로 변경값에 대한 실행 함수를 입력한다.
+
+```javascript
+const observer = new IntersectionObserver((entries)=>{
+  console.log(entries);
+  // entries : 옵저버에 등록된 요소들이 배열 형태로 반환됨
+}, { threshold: 1})
+```
+
+이렇게 생성한 옵저버에 감시 요소를 등록한다.
+
+```javascript
+observer.observe(등록할 요소);
+```
+
+- 배열으로 반환된 요소별 정보값   
+-- boundingClientRect : 감시 요소의 가로, 세로, 위치, 넚이, 높이    
+-- intersectionRatio : 감시 요소의 현재 화면에서 보이는 영역 비율    
+-- intersectionRect : 현재 보이는 부분에 대한 정보    
+-- isIntersecting : threshold 비율만큼 보여지고 있는지    
+-- rootBounds : 감시 요소의 상위 요소의 정보    
+-- target : 감시 대상 요소    
+-- time : 로드된 시점부터 감시 요소의 상태가 변경되기 까지의 시간    
+
+- threshold    
+-- 화면에 보여지는 비율 지정 (0-1)    
+-- 0 : 아주 조금이라도 노출 시 isIntersecting 값이 true 가 됨    
+-- 1 : 완전히 노출 시 isIntersecting 값이 true 가 됨
+
+<br>
+
+실행 함수 내부에 배열을 반복문으로 풀어서 정보값에 따라 요소를 변화시킨다.
+
+```javascript
+entries.forEach((entry)=>{
+  entry.target.classList.toggle('on', entry.isIntersecting);
+})
+```
+
+`classList.toggle()` 메서드는 첫번째 인자로 추가/제거 될 클래스 명을 입력하고, 두번째 인자로 변경될 조건을 입력한다.
+
+isIntersecting 값은 boolean 으로 반환되므로 해당 값의 true/false 에 따라 'on' 클래스가 붙게 된다.
+
+<br><br>
+<hr>
+<br><br>
+
+### Z 스크롤 [링크](/decodelab/221115/z_scroll/)
 
 <br>
 
@@ -44,12 +105,11 @@ window.addEventListener('scroll', ()=>{
 })
 ```
 
-
 <br><br>
 <hr>
 <br><br>
 
-#### 커서 디자인 [링크](/decodelab/221115/cursor/)
+### 커서 디자인 [링크](/decodelab/221115/cursor/)
 
 <br>
 
@@ -83,7 +143,7 @@ const mouseMove = (e)=>{
 <hr>
 <br><br>
 
-#### 입체 회전 큐브 [링크](/decodelab/221115/cube/)
+### 입체 회전 큐브 [링크](/decodelab/221115/cube/)
 
 <br>
 
