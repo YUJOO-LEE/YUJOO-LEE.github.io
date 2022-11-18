@@ -7,59 +7,77 @@ title: About
 <link rel="stylesheet" href="./assets/css/about.css">
 
 <div class="profile">
-  <section class="pic">
-    <div class="wrap">
-      <img src="./assets/images/about/yujoo.jpeg" alt="유주 사진">
-    </div>
-  </section>
-  <section class="txt">
+  <div class="left">
+    <section class="pic">
+      <div class="wrap">
+        <img src="./assets/images/about/yujoo.jpeg" alt="유주 사진">
+      </div>
+    </section>
+    <section class="txt">
+      <ul>
+        <li>
+          <i class="fa-brands fa-github-alt"></i>
+          <a href="https://github.com/YUJOO-LEE" target="_blank">https://github.com/YUJOO-LEE</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:lllllllllee@gmail.com">lllllllllee@gmail.com</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-signs-post"></i>
+          <span>
+            <a href="https://namu.wiki/w/ENTP#s-2" target="_blank">ENTP</a> 
+            변론가, 발명가형</span>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="right">
     <ul>
-      <li>이유주</li>
-      <li>
-        <i class="fa-brands fa-github-alt"></i>
-        <a href="https://github.com/YUJOO-LEE" target="_blank">https://github.com/YUJOO-LEE</a>
-      </li>
-      <li>
-        <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:lllllllllee@gmail.com">lllllllllee@gmail.com</a>
-      </li>
-      <li>
-        <i class="fa-solid fa-signs-post"></i>
-        <span>
-          <a href="https://namu.wiki/w/ENTP#s-2" target="_blank">ENTP</a> 
-          뜨거운 논쟁을 즐기는 변론가, 발명가형</span></li>
-      <li>
-        <i class="fa-solid fa-heart-pulse"></i>
-        <span>게임과 여행을 좋아합니다.</span>
-      </li>
+      <li class="last-name">LEE</li>
+      <li class="first-name">YUJOO</li>
     </ul>
-  </section>
+    <div class="introduce">
+      <p>여행을 좋아합니다. 계획 없이 떠나 낯선 사람과 만나는 모험같은 여행을 즐깁니다.</p>
+      <p>게임을 좋아합니다. 장르는 가리지 않고 하지만 스트레스 해소가 목적이므로 랭킹전은 하지 않습니다.</p>
+      <p>타인과 소통하고 공유하는 것을 좋아하고 낯선 환경에서 적응이 빠릅니다.</p>
+      <p>설명하는 것도 좋아해서 강사 또는 가이드 하라는 농담을 잘 듣습니다.</p>
+      <p>호기심이 많습니다. 문제를 발견하면 꼭 해결해야 잠을 잘 수 있습니다.</p>
+      <p>쉽고 반복적인 문제보다 복잡하고 어려운 문제를 좋아합니다.</p>
+      <p>개방적이고 유연한 사고방식으로 기존의 틀을 깨려고 노력하며, 감정적이 아닌 이성적인 정당성을 추구합니다.</p>
+    </div>
+  </div>
 </div>
-<section class="work">
+<section class="portfolio">
+  <p class="title">Portfolio</p>
   <article>
     <div class="pic">
       <img src="./assets/images/about/bookstore.png" alt="bookstore 스크린샷">
     </div>
     <ul>
       <li>
+        <i class="fa-solid fa-house"></i>
         <a href="https://leeyujoo.com/bookstore" target="_blank">
           https://leeyujoo.com/bookstore
         </a>
       </li>
       <li>
+        <i class="fa-brands fa-github-alt"></i>
         <a href="https://github.com/YUJOO-LEE/bookstore" target="_blank">
           https://github.com/YUJOO-LEE/bookstore
         </a>
       </li>
       <li>
+        <i class="fa-solid fa-file-pdf"></i>
         <a href="./assets/pdf/yujoo_bookstore_information.pdf" target="_blank">
           작업설명서.pdf
         </a>
       </li>
-      <li>
-        <span>react</span>
-        <span>redux-saga</span>
-        <span>scss</span>
+      <li class="skills">
+        <i class="fa-brands fa-react"></i>
+        <img src="./assets/images/about/redux.svg" alt="redux-saga" class="redux-saga">
+        <i class="fa-brands fa-sass"></i>
       </li>
     </ul>
   </article>
@@ -69,24 +87,27 @@ title: About
     </div>
     <ul>
       <li>
+        <i class="fa-solid fa-house"></i>
         <a href="https://yujoo-node-express.herokuapp.com/" target="_blank">
           https://yujoo-node-express.herokuapp.com/
         </a>
       </li>
       <li>
+        <i class="fa-brands fa-github-alt"></i>
         <a href="https://github.com/YUJOO-LEE/node-express" target="_blank">
           https://github.com/YUJOO-LEE/node-express
         </a>
       </li>
       <!-- <li>
+        <i class="fa-solid fa-file-pdf"></i>
         <span>작업설명서.pdf</span>
       </li> -->
-      <li>
-        <span>react</span>
-        <span>redux-toolkit</span>
-        <span>styled components</span>
-        <span>node-express</span>
-        <span>mongoDB</span>
+      <li class="skills">
+        <i class="fa-brands fa-react"></i>
+        <img src="./assets/images/about/redux.svg" alt="redux-toolkit" class="redux-toolkit">
+        <span class="styled-components">💅</span>
+        <i class="fa-brands fa-node-js"></i>
+        <img src="./assets/images/about/mongodb.png" alt="mongodb" class="mongodb">
       </li>
     </ul>
   </article>
@@ -96,22 +117,25 @@ title: About
     </div>
     <ul>
       <li>
+        <i class="fa-solid fa-house"></i>
         <a href="https://leeyujoo.com/react-three-fiber" target="_blank">
           https://leeyujoo.com/react-three-fiber
         </a>
       </li>
       <li>
+        <i class="fa-brands fa-github-alt"></i>
         <a href="https://github.com/YUJOO-LEE/react-three-fiber" target="_blank">
           https://github.com/YUJOO-LEE/react-three-fiber
         </a>
       </li>
       <!-- <li>
+        <i class="fa-solid fa-file-pdf"></i>
         <span>작업설명서.pdf</span>
       </li> -->
-      <li>
-        <span>react</span>
-        <span>redux-three-fiber</span>
-        <span>scss</span>
+      <li class="skills">
+        <i class="fa-brands fa-react"></i>
+        <img src="./assets/images/about/threejs.png" alt="react-three-fiber" class="react-three-fiber">
+        <i class="fa-brands fa-sass"></i>
       </li>
     </ul>
   </article>
