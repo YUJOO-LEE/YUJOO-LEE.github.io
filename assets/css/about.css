@@ -196,18 +196,24 @@ a{
 }
 
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 999px) {
   .profile{
     flex-direction: column;
   }
 
-  .txt li:first-of-type{
-    margin: 20px 0;
-    text-align: center;
+  .profile .right{
+    margin-top: 50px;
   }
 
-  .txt li i{
-    width: 22px;
-    height: 22px;
+  .profile .right ul{
+    display: flex;
+  }
+
+  .portfolio article{
+    flex-direction: column;
+  }
+
+  .portfolio article .pic{
+    width: 100%;
   }
 }
