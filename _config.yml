@@ -169,12 +169,12 @@ paginate: 10
 #   shortname: "Your Disqus username"
 
 # Gitment comments
-gitment:
-  username: "YUJOO-LEE"
-  repo: "YUJOO-LEE.github.io"
-  client_id: "3e0af677d01434fb4114"
-  client_secret: "d6bbb32fbb9001b5edc66c06d7446cbcc3a83af9"
-  redirect_uri: "https://leeyujoo.com/"   # If you use a custom domain name
+# gitment:
+#   username: "YUJOO-LEE"
+#   repo: "YUJOO-LEE.github.io"
+#   client_id: "3e0af677d01434fb4114"
+#   client_secret: "d6bbb32fbb9001b5edc66c06d7446cbcc3a83af9"
+#   redirect_uri: "https://leeyujoo.com/"   # If you use a custom domain name
 
 # Build settings
 # highlighter: none
