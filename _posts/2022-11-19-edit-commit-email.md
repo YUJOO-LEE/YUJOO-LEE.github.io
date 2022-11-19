@@ -3,7 +3,7 @@ layout: post
 title:  커밋 이메일 일괄수정 (잔디 누락)
 date:   2022-11-19 05:40:54 +0900
 comments : true
-categories: Scrapbook
+categories: Note
 tags: [github, terminal]
 ---
 
