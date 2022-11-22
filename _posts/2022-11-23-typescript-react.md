@@ -103,7 +103,9 @@ console.log(객체[변수]);
 
 svg 이미지 파일을 img 태그가 아닌 컴포넌트 형태로 import 해서 사용하고 있었는데, ts 를 적용하자 에러가 났다.
 
-svg 파일을 ReactComponent 로 export 시켜주는 작업이 필요하다고 한다.
+img 태그로 넣을 수도 있겠지만... 로고에 fill값을 주어 다양하게 사용하고 싶었다.
+
+svg 파일을 컴포넌트로 사용하려면 ReactComponent 로 export 시켜주는 작업이 필요하다고 한다.
 
 <br>
 
