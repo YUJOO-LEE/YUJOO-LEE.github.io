@@ -26,10 +26,10 @@ npm i -g typescript
 나머지는 사용하는 라이브러리 따라서 설치한다.
 
 ```terminal
-npm i @types/react @types/react-dom @types/react-router-dom @types/react-redux
+npm i @types/node @types/react @type/jest @types/react-dom @types/react-router-dom @types/react-redux
 ```
 
-`@types/node` 나 `@type/jest` 도 있던데, 음 jest 가 뭔지 모른다. 히히
+음 jest 는 뭔지 모른다. 히히
 
 <br>
 
