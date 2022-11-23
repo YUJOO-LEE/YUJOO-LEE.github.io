@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  react App을 typescript로 바꾸기
-date:   2022-11-23 13:47:03 +0900
+date:   2022-11-23 11:12:03 +0900
 comments : true
 categories: Note
 tags: [typescript, react, terminal]
