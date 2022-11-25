@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  map으로 리스트 출력 중 return false 시 발생 문제
+title:  map으로 리스트 출력 중 return시 발생 문제
 date:   2022-11-25 23:54:22 +0900
 comments : true
 categories: Note
