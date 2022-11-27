@@ -195,6 +195,18 @@ a{
   background-color: #705df2;
 }
 
+.nextjs{
+  background-color: #000;
+  padding: 0;
+}
+
+.typescript{
+  background-color: #3178c6;
+}
+
+.vercel{
+  background-color: #000;
+}
 
 @media screen and (max-width: 999px) {
   .profile{
