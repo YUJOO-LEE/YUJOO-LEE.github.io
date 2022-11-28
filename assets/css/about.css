@@ -208,6 +208,14 @@ a{
   background-color: #000;
 }
 
+.fa-html5{
+  background-color: #f35825;
+}
+
+.fa-js{
+  background-color: #f78224;
+}
+
 @media screen and (max-width: 999px) {
   .profile{
     flex-direction: column;
