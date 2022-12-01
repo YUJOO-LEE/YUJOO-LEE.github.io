@@ -208,3 +208,70 @@ const add: TypeCalc = (num1, num2) => {
 ```
 
 <br>
+
+### class
+
+class 내부의 상단에서 변수에 대한 타입을 지정한다.
+
+```typescript
+class CalCulator {
+  num1: number;
+  num2: number;
+
+  constructor(num1: number, num2: number) {
+    this.num1 = num1;
+    this.num2 = num2;
+  }
+
+  plus(): number {
+    return this.num1 + this.num2;
+  }
+}
+```
+
+메서드나 변수가 늘어나면 가독성이 떨어지므로 interface 를 사용하는 편이 좋다.
+
+class 에 타입 지정은 `implements` 로 지정해야 한다.
+
+```typescript
+interface TypeCalc {
+  num1: number;
+  num2: number;
+  plus(): number;
+}
+
+class CalCulator implements TypeCalc {
+  constructor(num1: number, num2: number) {
+    this.num1 = num1;
+    this.num2 = num2;
+  }
+
+  plus() {
+    return this.num1 + this.num2;
+  }
+}
+```
+
+<br>
+
+### 함수 세부 타입 지정
+
+파라미터로 넘어오는 값이 없을수도 있다면 `?` 로 옵셔널 파라미터 처리를 한다.
+
+```typescript
+function func(name?: string): string {
+  return `Hello, ${name || 'anonymous'}!`;
+}
+
+const result = hello('Yujoo');
+console.log(result);
+```
+
+<br>
+
+그러나 파라미터가 복수개가 된다면 첫번째 파라미터는 옵셔널로 지정할 수 없다.
+
+첫번째 파라미터는 필수적으로 입력되어야 한다.
+
+<br>
+
