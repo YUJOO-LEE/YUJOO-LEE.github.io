@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  next.js 기초
+title:  next.js 설치, pages, Link, useRouter, style jsx
 date:   2022-12-02 20:35:23 +0900
 comments : true
 categories: Note
