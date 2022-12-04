@@ -48,6 +48,7 @@ export default function Page() {
   const fetchData = async ()=>{
     const data = await fetch(API_URL);
     const result = await data.json();
+    setItems(result);
   }
 
   useEffect(()=>{
