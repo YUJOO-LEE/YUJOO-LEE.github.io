@@ -94,6 +94,12 @@ const router = useRouter();
 
 <br>
 
+#### router.back()
+
+이전 페이지로 돌아간다.
+
+<br>
+
 #### router.push()
 
 jsx 가 아닌 스크립트에서 페이지를 이동시키고 싶을 때 사용한다.
