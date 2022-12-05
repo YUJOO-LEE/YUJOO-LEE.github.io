@@ -46,6 +46,68 @@ export const getClient = (()=>{
 
 <br>
 
+### defaultOptions
+
+QueryClient 인스턴스 생성 시 defaultOptions 값으로 공통된 기본 쿼리를 지정할 수 있다.
+
+```typescript
+let client: QueryClient | null = null;
+if (!client) client = new QueryClient({
+  defaultOptions:{
+    queries: {
+      cacheTime: 1000 * 60 * 60 * 24,
+      staleTime: 1000 * 60,
+      refetchOnMount: false,
+      refetchOnReconnect: false,
+      refetchOnWindowFocus: false,
+    }
+  }
+});
+return client;
+```
+
+<br>
+
+#### cacheTime    
+캐시로 가지고 있는 시간을 설정한다.    
+기본값은 300000(5분)으로, 이 시간동안 활동이 없으면 garbage collector 에 의해 저장된 캐시가 삭제된다.    
+number 또는 Infinity 를 값으로 갖는다.
+
+<br>
+
+#### staleTime(number | Infinity)    
+fetch 로 받아온 데이터는 일정 시간이 지난 후 fresh 상태에서 stale 상태로 변경된다.    
+fresh 상태에서는 쿼리 인스턴스가 새롭게 mount 되어도 fetch 를 실행하지 않으며, stale 상태가 되어야 fetch 한다.    
+기본값은 0이며 쿼리 인스턴스가 mount 될 때 마다 fetch 를 실행함을 의미한다.    
+`staleTime` 은 fresh 상태에서 stale 상태로 변경되는데 걸리는 시간을 설정해 잦은 중복 호출을 방지한다.    
+number 또는 Infinity 를 값으로 갖는다.
+
+<br>
+
+#### refetchOnMount
+
+데이터가 stale 상태일 경우 mount 마다 refetch 를 실행하는 옵션이다.
+기본값은 true 이며, 만약 always 로 설정하면 mount 시 매번 refetch 를 실행한다.    
+boolean 또는 'always' 를 값으로 갖는다.
+
+<br>
+
+#### refetchOnWindowFocus
+
+데이터가 stale 상태일 때, 윈도우가 포커싱 될 때 마다 refetch를 실행한다는 옵션이다.    
+기본값은 true 이며, always 로 설정하면 윈도우가 포커싱 될 때 마다 refetch를 실행한다.    
+boolean 또는 'always' 를 값으로 갖는다.
+
+<br>
+
+#### refetchOnReconnect
+
+데이터가 stale 상태일 경우 다시 연결 될 때 refetch를 실행한다는 옵션이다.    
+기본값은 true 이며, always 시 쿼리가 매번 연결될 때 마다 refetch를 실행한다.    
+boolean 또는 'always' 를 값으로 갖는다.
+
+<br>
+
 ### QueryClientProvider
 
 query client 를 전역에서 사용하기 위해 app을 QueryClientProvider 로 감싸준다.
