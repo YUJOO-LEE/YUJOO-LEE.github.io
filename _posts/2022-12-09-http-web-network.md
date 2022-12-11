@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  모든 개발자를 위한 HTTP 웹 기본 지식 1. 네트워크, URI
-date:   2022-12-08 03:08:12 +0900
+date:   2022-12-09 03:08:12 +0900
 comments : true
 categories: Review
 tags: [web, http]
