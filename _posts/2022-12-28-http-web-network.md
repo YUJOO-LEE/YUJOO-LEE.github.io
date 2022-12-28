@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  모든 개발자를 위한 HTTP 웹 기본 지식 6. 캐시와 조건부 요청
-date:   2022-12-28 28:16:05 +0900
+date:   2022-12-28 18:16:05 +0900
 comments : true
 categories: Review
 tags: [web, http]
