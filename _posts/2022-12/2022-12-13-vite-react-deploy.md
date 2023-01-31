@@ -3,7 +3,7 @@ layout: post
 title:  vite react app github 에 배포하기
 date:   2022-12-13 13:58:43 +0900
 comments : true
-categories: Review
+categories: Note
 tags: [terminal, github, vite]
 ---
 
