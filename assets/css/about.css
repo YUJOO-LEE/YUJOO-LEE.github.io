@@ -216,6 +216,15 @@ a{
   background-color: #f78224;
 }
 
+.electron{
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.firebase{
+  background-color: #039BE5;
+}
+
 @media screen and (max-width: 999px) {
   .profile{
     flex-direction: column;
